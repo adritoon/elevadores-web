@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   { texto: "Asesoría", imagen: "/hero/asesoria.webp" },
-  { texto: "Diseño", imagen: "/hero/diseño.jpg" },
-  { texto: "Fabricación", imagen: "/hero/fabricacion.jpg" },
+  { texto: "Diseño", imagen: "/hero/diseño.png" },
+  { texto: "Fabricación", imagen: "/hero/fabricacion.jpeg" },
   { texto: "Instalación", imagen: "/hero/instalacion.jpg" },
   { texto: "Modernización", imagen: "/hero/modernizacion.jpg" },
 ];

@@ -46,14 +46,12 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
 
           {/* Logo SCMET */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <span className={`text-3xl sm:text-4xl font-extrabold tracking-tight transition-colors ${logoColor}`}>
+          <Link href="/" className="flex flex-col items-start justify-center group">
+            <span className={`text-3xl sm:text-4xl font-extrabold tracking-tight transition-colors leading-none ${logoColor}`}>
               ASCMET
             </span>
-            <div className={`border-l-2 h-8 transition-colors ${dividerColor}`}></div>
-            <div className={`flex flex-col text-[10px] sm:text-xs font-bold tracking-widest leading-tight transition-colors ${logoColor}`}>
-              <span>DISEÑO/</span>
-              <span>FABRICACIÓN</span>
+            <div className={`text-[10px] sm:text-[11px] font-bold tracking-[0.15em] transition-colors mt-1 opacity-80 ${logoColor}`}>
+              DISEÑO/FABRICACIÓN
             </div>
           </Link>
 
