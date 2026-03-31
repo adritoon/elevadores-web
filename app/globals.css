@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  /* Nueva Paleta de colores derivada del logo de SCMET */
+  
+  /* Primario: Un azul marino industrial y limpio */
+  --color-primary: #0A192F;
+  --color-primary-foreground: #FFFFFF;
+  
+  /* Secundario: Un gris pizarra suave para fondos y separación neutral */
+  --color-secondary: #E5E7EB;
+  --color-secondary-foreground: #0A192F;
+  
+  /* Acento (Plata/Cromo): Para resaltar elementos de alta tecnología */
+  /* Este se usa para elementos simples. Para botones y efectos usaremos degradados metálicos. */
+  --color-accent: #C0C0C0; 
+  --color-accent-foreground: #FFFFFF;
+
+  /* Colores de Texto */
+  --color-foreground: #0A192F; /* Encabezados */
+  --color-body-text: #1F2937; /* Lectura (ligeramente más suave) */
+  
+  /* Fondos de Página */
+  --color-background: #FAFAFB; /* Off-white limpio */
+  --color-card-background: #FFFFFF; /* Blanco puro para tarjetas */
+
+  /* Bordes y Divisores */
+  --color-border: #D1D5DB; 
+  --color-divider: #E5E7EB;
+
+  /* --- Texturas y Degradados Especiales --- */
+  
+  /* Utilidad de Degradado Metálico: Para resaltar iconos o bordes (Efecto cromo) */
+  --gradient-metallic: linear-gradient(135deg, #E1E8EE 0%, #C4CDD5 50%, #A3B1BB 100%);
+  
+  /* Utilidad de Textura de Fondo Metálico Cepillado: Para secciones de alto impacto */
+  /* Nota: Necesitarás una versión de la textura de fondo del logo cepillado.
+     Asumiré que has guardado una imagen llamada 'metal-brushed.jpg' en public/. */
+  --background-image-metallic-brushed: url('/metal-brushed.jpg');
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-body-text);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Estandarizar colores de encabezados al azul primario */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-foreground);
+  }
+}
+
+/* --- Clases de Utilidad Personalizadas para la 'Vibra' Metálica --- */
+@layer utilities {
+  /* 🔥 Efecto Cromo Hiperrealista para Botones */
+  .bg-cromo {
+    background: linear-gradient(
+      135deg, 
+      #ffffff 0%, 
+      #e2e8f0 20%, 
+      #94a3b8 48%, 
+      #334155 50%, /* El corte brusco de sombra metálica */
+      #94a3b8 52%, 
+      #f1f5f9 80%, 
+      #ffffff 100%
+    );
+    background-size: 200% 200%;
+  }
+
+  /* 🔥 Efecto Acero Cepillado Oscuro (Puro CSS) para el Hero */
+  .bg-acero-oscuro {
+    background-color: var(--color-primary); /* Azul marino de base */
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.04) 2px,
+      rgba(255, 255, 255, 0.04) 4px
+    );
+  }
+
+  .border-cromo {
+    border-color: #94a3b8;
+  }
+}
