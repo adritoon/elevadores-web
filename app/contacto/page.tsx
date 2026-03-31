@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react"; // 1. Agregamos Suspense aquí
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { sendEmail } from "../actions";
-import { useSearchParams } from "next/navigation"; //
+import { useSearchParams } from "next/navigation";
 
-export default function ContactoPage() {
+// --- ESTA ES LA FUNCIÓN QUE TIENE EL FORMULARIO ---
+function FormularioContacto() {
   const [isPending, setIsPending] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const searchParams = useSearchParams();
@@ -35,7 +36,6 @@ export default function ContactoPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
-          {/* Información de Contacto */}
           <div className="space-y-8">
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-border">
               <h2 className="text-2xl font-bold text-primary mb-8">Información Directa</h2>
@@ -73,15 +73,13 @@ export default function ContactoPage() {
               </div>
             </div>
             
-            {/* Mapa (Placeholder) */}
             <div className="h-64 bg-secondary rounded-2xl overflow-hidden relative border border-border">
-              <div className="absolute inset-0 flex items-center justify-center text-primary opacity-40 italic">
+              <div className="absolute inset-0 flex items-center justify-center text-primary opacity-40 italic text-center px-4">
                 [Aquí puedes insertar el Iframe de Google Maps]
               </div>
             </div>
           </div>
 
-          {/* Formulario de Contacto */}
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-border">
             {isSent ? (
               <div className="text-center py-12">
@@ -119,10 +117,10 @@ export default function ContactoPage() {
                     name="mensaje" 
                     required 
                     rows={4} 
-                    defaultValue={mensajeInicial} // <--- AGREGA ESTA LÍNEA
+                    defaultValue={mensajeInicial}
                     placeholder="Cuéntanos sobre tu proyecto..." 
                     className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:outline-none bg-gray-50 resize-none"
-                ></textarea>
+                  ></textarea>
                 </div>
 
                 <button 
@@ -141,5 +139,14 @@ export default function ContactoPage() {
         </div>
       </div>
     </section>
+  );
+}
+
+// --- ESTA ES LA PÁGINA QUE NEXT.JS BUSCA (CON EL SUSPENSE) ---
+export default function ContactoPage() {
+  return (
+    <Suspense fallback={<div className="pt-40 text-center text-primary font-bold">Cargando formulario...</div>}>
+      <FormularioContacto />
+    </Suspense>
   );
 }
