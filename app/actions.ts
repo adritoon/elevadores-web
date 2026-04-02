@@ -27,16 +27,20 @@ export async function sendEmail(formData: FormData) {
          le escribas directo al cliente */
       replyTo: email, 
       
-      /* Cuerpo del correo bien estructurado */
+      /* Cuerpo del correo bien estructurado con colores corporativos ASCMET */
       html: `
-        <div style="font-family: sans-serif; color: #171717; border: 1px solid #E5E7EB; padding: 20px; border-radius: 10px;">
-          <h2 style="color: #1e3a8a;">Nuevo mensaje desde la web ASCMET</h2>
-          <p><strong>Nombre:</strong> ${nombre}</p>
-          <p><strong>Teléfono:</strong> ${telefono}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <hr style="border: 0; border-top: 1px solid #eee;" />
-          <p><strong>Mensaje:</strong></p>
-          <p style="background-color: #f9fafb; padding: 15px; border-radius: 5px;">${mensaje}</p>
+        <div style="font-family: Arial, Helvetica, sans-serif; color: #4A525D; border: 1px solid #E2E8F0; padding: 30px; border-radius: 12px; max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+          <h2 style="color: #041E42; margin-top: 0; text-transform: uppercase; letter-spacing: -0.5px; border-bottom: 2px solid #E2E8F0; padding-bottom: 10px;">Nuevo Contacto • ASCMET</h2>
+          <div style="margin: 20px 0;">
+            <p style="margin: 8px 0;"><strong>Nombre:</strong> ${nombre}</p>
+            <p style="margin: 8px 0;"><strong>Teléfono:</strong> ${telefono}</p>
+            <p style="margin: 8px 0;"><strong>Email:</strong> <a href="mailto:${email}" style="color: #00A3E0; text-decoration: none;">${email}</a></p>
+          </div>
+          <hr style="border: 0; border-top: 3px solid #00A3E0; margin: 25px 0;" />
+          <p style="color: #041E42; font-weight: bold; margin-bottom: 10px; font-size: 16px;">Mensaje del cliente:</p>
+          <div style="background-color: #F8FAFC; padding: 20px; border-radius: 8px; border-left: 4px solid #4A525D; margin-top: 0; font-style: italic;">
+            ${mensaje}
+          </div>
         </div>
       `,
     });

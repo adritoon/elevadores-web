@@ -60,7 +60,7 @@ export default function GaleriaInteractiva({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSeleccionado(null)}
-              className="absolute inset-0 bg-[#171717]/80 backdrop-blur-sm"
+              className="absolute inset-0 bg-[#041E42]/80 backdrop-blur-sm"
             />
 
             <motion.div 
@@ -71,7 +71,7 @@ export default function GaleriaInteractiva({
             >
               <button 
                 onClick={() => setSeleccionado(null)}
-                className="absolute top-4 right-4 z-20 bg-white/80 p-2 rounded-full text-primary hover:bg-secondary transition-colors"
+                className="absolute top-4 right-4 z-20 bg-white/90 p-2 rounded-full text-[#041E42] hover:bg-white transition-colors shadow-lg"
               >
                 <X size={24} />
               </button>
@@ -116,7 +116,7 @@ export default function GaleriaInteractiva({
                     // Aquí unimos la categoría (ej. Ascensores Residenciales) con el modelo
                     asunto={`${categoriaPadre} - Modelo: ${seleccionado.nombre}`} 
                     texto="Cotizar este modelo"
-                    className="w-full py-5" 
+                    className="w-full py-5 !bg-[#4A525D]" 
                   />
                 </div>
               </div>

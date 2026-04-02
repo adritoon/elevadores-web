@@ -31,7 +31,8 @@ export default async function SubpaginaProducto({
           {/* Lado Izquierdo: Info Principal */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-6xl font-black text-primary leading-none uppercase tracking-tighter break-words">
+              {/* CORRECCIÓN: Tamaño de fuente responsivo para evitar overflow horizontal en móviles */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight uppercase tracking-tighter">
                 {producto.titulo}
               </h1>
               <div className="w-20 h-2 bg-accent"></div>
@@ -41,11 +42,11 @@ export default async function SubpaginaProducto({
               {producto.descripcion}
             </p>
             
-            <div className="pt-6 border-t border-gray-100">
+            <div className="pt-6 border-t border-gray-200">
               <BotonCotizar 
                 asunto={producto.titulo} 
                 texto={`SOLICITAR COTIZACIÓN`} 
-                className="w-full md:w-auto px-12 py-5 shadow-xl hover:scale-105 transition-transform"
+                className="w-full md:w-auto px-12 py-5 shadow-xl hover:scale-105 transition-transform bg-accent text-white"
               />
               <div className="flex items-center gap-2 text-sm text-primary/60 mt-4 font-bold uppercase tracking-widest">
                 <ShieldCheck size={16} className="text-accent" />
@@ -54,9 +55,8 @@ export default async function SubpaginaProducto({
             </div>
           </div>
 
-          {/* Lado Derecho: Especificaciones de Ingeniería con estilo de Tarjeta Técnica */}
-          <div className="bg-[#171717] p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
-            {/* Decoración de fondo sutil */}
+          {/* CORRECCIÓN 2: Lado Derecho - Tarjeta en Azul Profundo (bg-primary) */}
+          <div className="bg-primary p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
             
             <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
@@ -65,11 +65,11 @@ export default async function SubpaginaProducto({
             
             <ul className="space-y-5">
               {(producto.specs || ["Consultar especificaciones técnicas"]).map((item, i) => (
-                <li key={i} className="flex items-start gap-4 text-slate-300 group">
-                  <div className="mt-1 bg-accent/20 p-1 rounded-md">
+                <li key={i} className="flex items-center gap-4 text-white group">
+                  <div className="bg-accent/20 p-1 rounded-md shrink-0">
                     <CheckCircle2 size={18} className="text-accent" />
                   </div>
-                  <span className="text-lg font-medium leading-tight">{item}</span>
+                  <span className="text-lg font-medium leading-tight opacity-90">{item}</span>
                 </li>
               ))}
             </ul>

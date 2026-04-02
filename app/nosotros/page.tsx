@@ -31,16 +31,18 @@ export default function NosotrosPage() {
   return (
     <main className="bg-background">
       {/* Hero de Nosotros con Textura de Ingeniería */}
-      <section className="relative pt-48 pb-28 bg-[#171717] text-white overflow-hidden">
-        {/* Patrón de líneas técnico sutil */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, #ffffff 2px, #ffffff 4px)' }}></div>
+      {/* Hero de Nosotros CORREGIDO: Fondo Azul Profundo */}
+      <section className="relative pt-48 pb-28 bg-primary text-white overflow-hidden">
+        {/* Patrón sutil para darle textura de ingeniería */}
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, #ffffff 2px, #ffffff 4px)' }}></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.h1 
-            className="text-4xl md:text-7xl font-extrabold mb-8 uppercase tracking-tighter"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-7xl font-extrabold mb-8 uppercase tracking-tighter text-white"
           >
-            <span className="text-white/40">Sobre</span>{" "}
-            <span className="text-accent">ASCMET</span>
+            Sobre <span className="text-accent">ASCMET</span>
           </motion.h1>
           <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light">
             Ingeniería peruana transformando la movilidad vertical a través de precisión, seguridad y fabricación a medida.

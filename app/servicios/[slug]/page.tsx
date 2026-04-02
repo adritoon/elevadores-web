@@ -63,8 +63,8 @@ export default async function SubpaginaServicio({
               <h3 className="text-2xl font-bold text-primary mb-6">¿Qué incluye?</h3>
               <ul className="space-y-4">
                 {servicio.caracteristicas.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="text-accent shrink-0 mt-1" size={20} />
+                  <li key={index} className="flex items-center gap-3">
+                    <CheckCircle2 className="text-accent shrink-0" size={20} />
                     <span className="text-foreground">{item}</span>
                   </li>
                 ))}

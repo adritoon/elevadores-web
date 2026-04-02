@@ -19,7 +19,7 @@ export default function BotonCotizar({
   return (
     <Link 
       href={href}
-      className={`inline-flex justify-center items-center gap-2 bg-[#171717] text-white px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition-all shadow-lg hover:-translate-y-1 group ${className}`}
+      className={`inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition-all shadow-lg hover:-translate-y-1 group ${className}`}
     >
       {texto}
       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

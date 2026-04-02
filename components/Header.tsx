@@ -35,10 +35,10 @@ export default function Header() {
 
   const textColor = isHome && !isScrolled
     ? "text-white hover:text-gray-300"
-    : "text-[#171717] hover:text-blue-800";
+    : "text-primary hover:text-accent";
 
-  const logoColor = isHome && !isScrolled ? "text-white" : "text-[#171717]";
-  const dividerColor = isHome && !isScrolled ? "border-white/50" : "border-[#171717]/30";
+  const logoColor = isHome && !isScrolled ? "text-white" : "text-primary";
+  const dividerColor = isHome && !isScrolled ? "border-white/50" : "border-primary/30";
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${headerBg}`}>
@@ -67,7 +67,7 @@ export default function Header() {
               </Link>
               <div className="absolute top-full left-0 w-64 bg-white border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
                 {servicios.map((s) => (
-                  <Link key={s.slug} href={`/servicios/${s.slug}`} className="block px-4 py-3 text-sm text-[#171717] hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0">
+                  <Link key={s.slug} href={`/servicios/${s.slug}`} className="block px-4 py-3 text-sm text-primary hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0">
                     {s.titulo}
                   </Link>
                 ))}
@@ -81,7 +81,7 @@ export default function Header() {
               </Link>
               <div className="absolute top-full left-0 w-72 bg-white border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
                 {productos.map((p) => (
-                  <Link key={p.slug} href={`/productos/${p.slug}`} className="block px-4 py-3 text-sm text-[#171717] hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0">
+                  <Link key={p.slug} href={`/productos/${p.slug}`} className="block px-4 py-3 text-sm text-primary hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0">
                     {p.titulo}
                   </Link>
                 ))}
@@ -103,7 +103,7 @@ export default function Header() {
       {/* Menú Móvil Expandible */}
       {isOpen && (
         <div className="md:hidden bg-white h-[calc(100vh-80px)] overflow-y-auto absolute w-full left-0 top-20 shadow-2xl border-t border-gray-100">
-          <div className="px-4 py-6 space-y-2 text-[#171717]">
+          <div className="px-4 py-6 space-y-2 text-primary">
             <Link href="/" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-semibold border-b border-gray-50">Inicio</Link>
             <Link href="/nosotros" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-semibold border-b border-gray-50">Nosotros</Link>
 
@@ -113,13 +113,13 @@ export default function Header() {
                 onClick={() => toggleMobileSubmenu('servicios')}
                 className="flex w-full justify-between items-center px-4 py-3 text-lg font-semibold border-b border-gray-50"
               >
-                Servicios <ChevronDown size={20} className={`transition-transform duration-200 ${mobileSubmenu === 'servicios' ? 'rotate-180 text-blue-600' : ''}`} />
+                Servicios <ChevronDown size={20} className={`transition-transform duration-200 ${mobileSubmenu === 'servicios' ? 'rotate-180 text-accent' : ''}`} />
               </button>
               {mobileSubmenu === 'servicios' && (
                 <div className="bg-gray-50 py-2 border-b border-gray-100">
-                  <Link href="/servicios" onClick={() => setIsOpen(false)} className="block px-8 py-3 text-sm font-bold text-blue-700">Ver Todos los Servicios</Link>
+                  <Link href="/servicios" onClick={() => setIsOpen(false)} className="block px-8 py-3 text-sm font-bold text-accent">Ver Todos los Servicios</Link>
                   {servicios.map((s) => (
-                    <Link key={s.slug} href={`/servicios/${s.slug}`} onClick={() => setIsOpen(false)} className="block px-8 py-3 text-sm text-gray-700 hover:text-blue-600">
+                    <Link key={s.slug} href={`/servicios/${s.slug}`} onClick={() => setIsOpen(false)} className="block px-8 py-3 text-sm text-gray-700 hover:text-accent">
                       {s.titulo}
                     </Link>
                   ))}
@@ -133,13 +133,13 @@ export default function Header() {
                 onClick={() => toggleMobileSubmenu('productos')}
                 className="flex w-full justify-between items-center px-4 py-3 text-lg font-semibold border-b border-gray-50"
               >
-                Productos <ChevronDown size={20} className={`transition-transform duration-200 ${mobileSubmenu === 'productos' ? 'rotate-180 text-blue-600' : ''}`} />
+                Productos <ChevronDown size={20} className={`transition-transform duration-200 ${mobileSubmenu === 'productos' ? 'rotate-180 text-accent' : ''}`} />
               </button>
               {mobileSubmenu === 'productos' && (
                 <div className="bg-gray-50 py-2 border-b border-gray-100">
-                  <Link href="/productos" onClick={() => setIsOpen(false)} className="block px-8 py-3 text-sm font-bold text-blue-700">Ver Todos los Productos</Link>
+                  <Link href="/productos" onClick={() => setIsOpen(false)} className="block px-8 py-3 text-sm font-bold text-accent">Ver Todos los Productos</Link>
                   {productos.map((p) => (
-                    <Link key={p.slug} href={`/productos/${p.slug}`} onClick={() => setIsOpen(false)} className="block px-8 py-3 text-sm text-gray-700 hover:text-blue-600">
+                    <Link key={p.slug} href={`/productos/${p.slug}`} onClick={() => setIsOpen(false)} className="block px-8 py-3 text-sm text-gray-700 hover:text-accent">
                       {p.titulo}
                     </Link>
                   ))}

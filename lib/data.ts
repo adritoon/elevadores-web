@@ -43,7 +43,7 @@ export const productos = [
       "Cumplimiento Norma A.120",
       "Nos adecuamos a las dimensiones",
       "Botonera en sistema Braille",
-      "Nivelación de alta precisión (±5mm)"
+      "Nivelación de alta precisión"
     ],
     galeria: [
       {

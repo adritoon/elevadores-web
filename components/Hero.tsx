@@ -24,8 +24,8 @@ export default function Hero() {
   }, []);
 
   return (
-    /* NUEVO COLOR BASE: #171717 (Plomo Carbón) */
-    <section className="relative h-[80vh] md:h-[90vh] min-h-[600px] w-full overflow-hidden bg-[#171717]">
+    /* NUEVO COLOR BASE: primary (Azul Corporativo Profundo) */
+    <section className="relative h-[80vh] md:h-[90vh] min-h-[600px] w-full overflow-hidden bg-primary">
       
       {/* --- Capa 1: FONDO DINÁMICO --- */}
       <AnimatePresence mode="wait">
@@ -47,10 +47,11 @@ export default function Hero() {
 
       {/* --- Capa 2: OVERLAYS DE OSCURIDAD (Fijos) --- */}
       <div className="absolute inset-0 z-10">
-        {/* Capa base gris oscuro */}
-        <div className="absolute inset-0 bg-[#171717]/70" />
+        {/* Capa base oscura mate para contraste, y ocultar rojos de la foto */}
+        <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-black/60" />
         {/* Degradado para transición suave */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#171717]/50 via-transparent to-[#171717]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-primary" />
       </div>
 
       {/* --- Capa 3: CONTENIDO PRINCIPAL --- */}
@@ -76,7 +77,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.6, ease: "circOut" }}
-                  className="text-white uppercase tracking-tighter whitespace-nowrap drop-shadow-md"
+                  className="text-white uppercase tracking-tighter whitespace-nowrap"
                 >
                   {slides[index].texto}
                 </motion.span>
@@ -101,7 +102,7 @@ export default function Hero() {
             {/* BOTÓN CROMADO/PLATEADO - El toque de diseño clave */}
             <Link 
               href="/contacto" 
-              className="inline-flex justify-center items-center gap-2 bg-gradient-to-tr from-gray-200 via-white to-gray-300 text-[#171717] px-10 py-5 rounded-md font-extrabold hover:scale-105 transition-all shadow-2xl group cursor-pointer border border-white"
+              className="inline-flex justify-center items-center gap-2 bg-gradient-to-tr from-gray-200 via-white to-gray-300 text-primary px-10 py-5 rounded-md font-extrabold hover:scale-105 transition-all shadow-2xl group cursor-pointer border border-white"
             >
               Solicitar Cotización
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -117,8 +118,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Decoración inferior degradada al nuevo color plomo */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#171717] via-[#171717]/80 to-transparent z-10 pointer-events-none" />
+      {/* Decoración inferior degradada al nuevo color primario */}
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-primary via-primary/80 to-transparent z-10 pointer-events-none" />
     </section>
   );
 }
