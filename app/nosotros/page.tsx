@@ -31,7 +31,7 @@ export default function NosotrosPage() {
   return (
     <main className="bg-background">
       {/* Hero de Nosotros con Textura de Ingeniería */}
-      <section className="relative pt-48 pb-28 bg-[#0A192F] text-white overflow-hidden">
+      <section className="relative pt-48 pb-28 bg-[#171717] text-white overflow-hidden">
         {/* Patrón de líneas técnico sutil */}
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, #ffffff 2px, #ffffff 4px)' }}></div>
         

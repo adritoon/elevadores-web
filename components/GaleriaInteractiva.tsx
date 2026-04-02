@@ -60,7 +60,7 @@ export default function GaleriaInteractiva({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSeleccionado(null)}
-              className="absolute inset-0 bg-[#0A192F]/80 backdrop-blur-sm"
+              className="absolute inset-0 bg-[#171717]/80 backdrop-blur-sm"
             />
 
             <motion.div 

@@ -29,7 +29,7 @@ export async function sendEmail(formData: FormData) {
       
       /* Cuerpo del correo bien estructurado */
       html: `
-        <div style="font-family: sans-serif; color: #0A192F; border: 1px solid #E5E7EB; padding: 20px; border-radius: 10px;">
+        <div style="font-family: sans-serif; color: #171717; border: 1px solid #E5E7EB; padding: 20px; border-radius: 10px;">
           <h2 style="color: #1e3a8a;">Nuevo mensaje desde la web ASCMET</h2>
           <p><strong>Nombre:</strong> ${nombre}</p>
           <p><strong>Teléfono:</strong> ${telefono}</p>

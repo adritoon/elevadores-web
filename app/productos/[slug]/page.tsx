@@ -31,7 +31,7 @@ export default async function SubpaginaProducto({
           {/* Lado Izquierdo: Info Principal */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-black text-primary leading-none uppercase tracking-tighter">
+              <h1 className="text-3xl md:text-6xl font-black text-primary leading-none uppercase tracking-tighter break-words">
                 {producto.titulo}
               </h1>
               <div className="w-20 h-2 bg-accent"></div>
@@ -55,7 +55,7 @@ export default async function SubpaginaProducto({
           </div>
 
           {/* Lado Derecho: Especificaciones de Ingeniería con estilo de Tarjeta Técnica */}
-          <div className="bg-[#0A192F] p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
+          <div className="bg-[#171717] p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
             {/* Decoración de fondo sutil */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
             

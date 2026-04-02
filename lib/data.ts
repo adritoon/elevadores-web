@@ -50,7 +50,7 @@ export const productos = [
         id: "modelo-a",
         imagen: "/productos/PPD/modelo-a.png",
         nombre: "Modelo Cristal Elegance",
-        precio: "Desde $15,000",
+        //precio: "Desde $15,000",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
@@ -58,7 +58,7 @@ export const productos = [
         id: "modelo-c",
         imagen: "/productos/PPD/modelo-c.png",
         nombre: "Modelo Cristal Poor",
-        precio: "Desde $12,000",
+        //precio: "Desde $12,000",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
@@ -66,7 +66,7 @@ export const productos = [
         id: "modelo-b",
         imagen: "/productos/PPD/modelo-b.png",
         nombre: "Modelo Acero Inox",
-        precio: "Desde $12,500",
+        //precio: "Desde $12,500",
         diferencia: "Diseño robusto ideal para exteriores o alto tráfico.",
         caracteristicas: ["Capacidad: 500kg", "Resistente a la intemperie", "Botonera braille"]
       }
@@ -88,7 +88,7 @@ export const productos = [
         id: "modelo-a",
         imagen: "/productos/EPD/modelo-a.png",
         nombre: "Modelo Cristal Elegance",
-        precio: "Desde $15,000",
+        //precio: "Desde $15,000",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
@@ -96,7 +96,7 @@ export const productos = [
         id: "modelo-c",
         imagen: "/productos/EPD/modelo-c.png",
         nombre: "Modelo Cristal Poor",
-        precio: "Desde $12,000",
+        //precio: "Desde $12,000",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
@@ -104,7 +104,7 @@ export const productos = [
         id: "modelo-b",
         imagen: "/productos/EPD/modelo-b.png",
         nombre: "Modelo Acero Inox",
-        precio: "Desde $12,500",
+        //precio: "Desde $12,500",
         diferencia: "Diseño robusto ideal para exteriores o alto tráfico.",
         caracteristicas: ["Capacidad: 500kg", "Resistente a la intemperie", "Botonera braille"]
       }

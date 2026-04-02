@@ -55,9 +55,13 @@ function FormularioContacto() {
                   <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-primary shrink-0">
                     <Mail size={24} />
                   </div>
-                  <div>
+                  {/* 1. min-w-0 permite que el contenedor se encoja si es necesario */}
+                  <div className="min-w-0">
                     <p className="text-sm font-bold text-primary opacity-60 uppercase">Escríbenos</p>
-                    <p className="text-lg font-semibold text-primary">contacto@ascmet.com</p>
+                    {/* 2. break-all permite cortar el texto, y bajamos un poco la fuente en móvil (text-base) */}
+                    <p className="text-base sm:text-lg font-semibold text-primary break-all">
+                      contacto@ascmet.com
+                    </p>
                   </div>
                 </div>
 
@@ -67,17 +71,18 @@ function FormularioContacto() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-primary opacity-60 uppercase">Ubicación</p>
-                    <p className="text-lg font-semibold text-primary">Av. Principal 123, Zona Industrial, Lima</p>
+                    <p className="text-lg font-semibold text-primary">Lima, Perú</p>
                   </div>
                 </div>
               </div>
             </div>
             
+            {/* MAPA OCULTO TEMPORALMENTE (Sin oficina física por ahora)
             <div className="h-64 bg-secondary rounded-2xl overflow-hidden relative border border-border">
               <div className="absolute inset-0 flex items-center justify-center text-primary opacity-40 italic text-center px-4">
                 [Aquí puedes insertar el Iframe de Google Maps]
               </div>
-            </div>
+            </div>*/}
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-border">
