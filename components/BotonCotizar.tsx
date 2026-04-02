@@ -7,19 +7,19 @@ interface Props {
   texto?: string;
 }
 
-export default function BotonCotizar({ 
-  asunto = "General", 
-  className = "", 
-  texto = "Solicitar Cotización" 
+export default function BotonCotizar({
+  asunto = "General",
+  className = "",
+  texto = "Solicitar Cotización"
 }: Props) {
-  
+
   // Codificamos el texto para que sea seguro en una URL
   const href = `/contacto?asunto=${encodeURIComponent(asunto)}`;
 
   return (
     <Link 
       href={href}
-      className={`inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition-all shadow-lg hover:-translate-y-1 group ${className}`}
+      className={`inline-flex items-center justify-center gap-3 bg-primary text-white px-8 py-5 rounded-md font-bold uppercase tracking-widest hover:bg-accent hover:text-primary transition-all shadow-lg hover:-translate-y-1 group ${className}`}
     >
       {texto}
       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

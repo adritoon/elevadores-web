@@ -73,8 +73,8 @@ export const productos = [
     ]
   },
   {
-    slug: "elevadores-para-discapacitados",
-    titulo: "Elevadores para Discapacitados",
+    slug: "elevadores",
+    titulo: "Elevadores",
     descripcion: "Equipos diseñados con cabinas amplias, botoneras accesibles y puertas automáticas, cumpliendo todas las normativas de accesibilidad.",
     icono: "Warehouse", // <--- AGREGADO (Puedes cambiarlo por Box o Building2 si prefieres)
     specs: [

@@ -19,14 +19,14 @@ export default async function SubpaginaProducto({
     <main className="bg-white">
       <div className="max-w-6xl mx-auto px-4 py-32">
         {/* Enlace de retorno con hover animado */}
-        <Link 
-          href="/productos" 
+        <Link
+          href="/productos"
           className="inline-flex items-center gap-2 text-primary/60 hover:text-primary font-bold transition-colors mb-12 group"
         >
-          <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> 
+          <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           VOLVER AL CATÁLOGO
         </Link>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
           {/* Lado Izquierdo: Info Principal */}
           <div className="space-y-8">
@@ -41,12 +41,11 @@ export default async function SubpaginaProducto({
             <p className="text-xl text-body-text leading-relaxed font-medium opacity-80">
               {producto.descripcion}
             </p>
-            
+
             <div className="pt-6 border-t border-gray-200">
-              <BotonCotizar 
-                asunto={producto.titulo} 
-                texto={`SOLICITAR COTIZACIÓN`} 
-                className="w-full md:w-auto px-12 py-5 shadow-xl hover:scale-105 transition-transform bg-accent text-white"
+              <BotonCotizar
+                asunto={producto.titulo}
+                className="w-full md:w-auto"
               />
               <div className="flex items-center gap-2 text-sm text-primary/60 mt-4 font-bold uppercase tracking-widest">
                 <ShieldCheck size={16} className="text-accent" />
@@ -58,11 +57,11 @@ export default async function SubpaginaProducto({
           {/* CORRECCIÓN 2: Lado Derecho - Tarjeta en Azul Profundo (bg-primary) */}
           <div className="bg-primary p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
-            
+
             <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
               Ficha de Ingeniería
             </h3>
-            
+
             <ul className="space-y-5">
               {(producto.specs || ["Consultar especificaciones técnicas"]).map((item, i) => (
                 <li key={i} className="flex items-center gap-4 text-white group">
@@ -89,10 +88,10 @@ export default async function SubpaginaProducto({
               </h2>
               <p className="text-body-text opacity-60 mt-2">Seleccione un modelo para ver detalles específicos</p>
             </div>
-            
-            <GaleriaInteractiva 
-              items={producto.galeria} 
-              categoriaPadre={producto.titulo} 
+
+            <GaleriaInteractiva
+              items={producto.galeria}
+              categoriaPadre={producto.titulo}
             />
           </section>
         )}

@@ -1,6 +1,6 @@
 "use client";
 
-import { ShieldCheck, Cpu, Users, Award, CheckCircle2, ArrowRight } from "lucide-react";
+import { ShieldCheck, Cpu, Users, Award, CheckCircle2, ArrowRight, Target, Eye } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -98,6 +98,42 @@ export default function NosotrosPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección Misión y Visión (En Color Corporativo Principal) */}
+      <section className="py-24 bg-primary text-white border-y border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 relative">
+            
+            {/* Divisor vertical en pantallas grandes */}
+            <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-3/4 bg-white/10"></div>
+
+            {/* Misión */}
+            <div className="relative">
+              <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center mb-8 text-accent shadow-[0_0_30px_rgba(0,163,224,0.15)]">
+                <Target size={36} />
+              </div>
+              <h3 className="text-3xl lg:text-4xl font-black mb-6 uppercase tracking-tighter text-white">Nuestra Misión</h3>
+              <div className="w-12 h-1 bg-accent mb-8"></div>
+              <p className="text-lg lg:text-xl text-white/80 leading-relaxed font-light">
+                Diseñar, fabricar e instalar sistemas de elevación excepcionalmente seguros y eficientes. Estamos comprometidos con derribar barreras arquitectónicas promoviendo la accesibilidad universal en el Perú. Logramos esto a través de ingeniería de precisión, cumplimiento estricto de normativas y un servicio al cliente humano y transparente.
+              </p>
+            </div>
+
+            {/* Visión */}
+            <div className="relative">
+              <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center mb-8 text-accent shadow-[0_0_30px_rgba(0,163,224,0.15)]">
+                <Eye size={36} />
+              </div>
+              <h3 className="text-3xl lg:text-4xl font-black mb-6 uppercase tracking-tighter text-white">Nuestra Visión</h3>
+              <div className="w-12 h-1 bg-accent mb-8"></div>
+              <p className="text-lg lg:text-xl text-white/80 leading-relaxed font-light">
+                Ser el principal referente y la empresa de mayor confianza en soluciones de movilidad vertical a nivel nacional. Aspiramos a ser el socio estratégico ideal para las constructoras y familias peruanas, desarrollando un catálogo de elevadores que sean un sinónimo inquebrantable de innovación tecnológica, estética y, sobre todo, máxima seguridad.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
