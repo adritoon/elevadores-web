@@ -2,13 +2,13 @@ export const servicios = [
   {
     slug: "diseno-e-ingenieria",
     titulo: "Diseño e Ingeniería",
-    descripcion: "Planificación detallada y cálculos estructurales precisos para garantizar la máxima seguridad y eficiencia en su proyecto de elevación.",
+    descripcion: "Desarrollamos proyectos de ingeniería y diseño especializado, respaldados por un equipo profesional altamente capacitado, orientado a ofrecer soluciones seguras, eficientes y de alto nivel técnico.",
     icono: "Ruler",
   },
   {
     slug: "fabricacion",
-    titulo: "Fabricación a Medida",
-    descripcion: "Construimos elevadores con materiales de la más alta calidad y tecnología de punta.",
+    titulo: "Fabricación",
+    descripcion: "Fabricamos los componentes de cada proyecto con altos estándares de calidad, seguridad y responsabilidad ambiental, garantizando soluciones de elevación confiables, eficientes y duraderas.",
     icono: "Factory",
     imagen: "/servicios/linda.png",
     detalleLargo: "Nuestra planta de fabricación cuenta con maquinaria CNC de última generación. Cada cabina es diseñada y construida según las especificaciones exactas del pozo de su edificio, asegurando que no se pierda ni un centímetro de espacio útil.",
@@ -22,14 +22,20 @@ export const servicios = [
   {
     slug: "instalacion",
     titulo: "Instalación",
-    descripcion: "Montaje profesional y riguroso por parte de nuestros técnicos certificados, asegurando un funcionamiento impecable desde el primer día.",
+    descripcion: "Realizamos la instalación de plataforma para personas con discapacidad, elevadores y montacargas con técnicos profesionales, garantizando seguridad, eficiencia y correcto funcionamiento.",
     icono: "Wrench",
   },
   {
     slug: "modernizacion",
     titulo: "Modernización",
-    descripcion: "Actualizamos su elevador antiguo con componentes modernos para mejorar su rendimiento, seguridad y estética sin cambiar toda la estructura.",
+    descripcion: "Actualizamos y optimizamos sistemas de elevación existentes, mejorando su tecnología, seguridad y rendimiento.",
     icono: "RefreshCw",
+  },
+  {
+    slug: "asesoria-tecnica-especializada",
+    titulo: "Asesoría técnica especializada",
+    descripcion: "Brindamos asesoramiento profesional para seleccionar la mejor solución de elevación según las necesidades de cada cliente y proyecto.",
+    icono: "Headset",
   },
 ];
 

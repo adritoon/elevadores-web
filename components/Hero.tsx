@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
-  { texto: "Asesoría", imagen: "/hero/asesoria.webp" },
+  { texto: "Asesoría", imagen: "/hero/asesoria.png" },
   { texto: "Diseño", imagen: "/hero/diseño.png" },
-  { texto: "Fabricación", imagen: "/hero/fabricacion.jpeg" },
-  { texto: "Instalación", imagen: "/hero/instalacion.jpg" },
+  { texto: "Fabricación", imagen: "/hero/fabricacion.png" },
+  { texto: "Instalación", imagen: "/hero/instalacion.webp" },
   { texto: "Modernización", imagen: "/hero/modernizacion.jpg" },
 ];
 
@@ -37,21 +37,21 @@ export default function Hero() {
           transition={{ duration: 1.5 }}
           className="absolute inset-0 z-0"
         >
-          {/* Añadimos grayscale-[30%] para apagar los colores de la foto y darle un toque más metálico */}
+          {/* Dejamos ver los colores de la foto con un mínimo ajuste si se desea, o al natural */}
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 grayscale-[30%]"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
             style={{ backgroundImage: `url(${slides[index].imagen})` }}
           />
         </motion.div>
       </AnimatePresence>
 
       {/* --- Capa 2: OVERLAYS DE OSCURIDAD (Fijos) --- */}
-      <div className="absolute inset-0 z-10">
-        {/* Capa base oscura mate para contraste, y ocultar rojos de la foto */}
-        <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-black/60" />
-        {/* Degradado para transición suave */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-primary" />
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        {/* Capa sutil para mantener legibilidad sin ocultar la imagen */}
+        <div className="absolute inset-0 bg-primary/20 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-black/40" />
+        {/* Degradado para transición suave haciéndolo menos invasivo abajo */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-primary/50" />
       </div>
 
       {/* --- Capa 3: CONTENIDO PRINCIPAL --- */}
@@ -118,8 +118,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Decoración inferior degradada al nuevo color primario */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-primary via-primary/80 to-transparent z-10 pointer-events-none" />
+      {/* Decoración inferior degradada al nuevo color primario, reducida en altura para dejar ver más imagen */}
+      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-primary via-primary/60 to-transparent z-10 pointer-events-none" />
     </section>
   );
 }

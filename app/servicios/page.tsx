@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { servicios } from "../../lib/data";
-import { ArrowRight, Ruler, Factory, Wrench, RefreshCw } from "lucide-react";
+import { ArrowRight, Ruler, Factory, Wrench, RefreshCw, Headset } from "lucide-react";
 
 const IconMap: Record<string, any> = {
-  Ruler, Factory, Wrench, RefreshCw
+  Ruler, Factory, Wrench, RefreshCw, Headset
 };
 
 export default function ServiciosPage() {
@@ -24,7 +24,7 @@ export default function ServiciosPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicios.map((servicio) => {
             const IconComponent = IconMap[servicio.icono];
             

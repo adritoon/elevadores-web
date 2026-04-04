@@ -1,29 +1,39 @@
 "use client";
 
-import { ShieldCheck, Cpu, Users, Award, CheckCircle2, ArrowRight, Target, Eye } from "lucide-react";
+import { ShieldCheck, Cpu, Users, Award, CheckCircle2, ArrowRight, Target, Eye, Handshake, Scale } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 const valores = [
   {
-    titulo: "Innovación",
-    desc: "Aplicamos las últimas tecnologías en diseño y fabricación de sistemas de elevación.",
-    icon: Cpu,
-  },
-  {
     titulo: "Seguridad",
-    desc: "Nuestra prioridad absoluta. Cumplimos con todas las normativas internacionales de seguridad.",
+    desc: "Priorizamos la seguridad en nuestros procesos, equipos y servicios para proteger a nuestros clientes y colaboradores.",
     icon: ShieldCheck,
   },
   {
-    titulo: "Compromiso",
-    desc: "Acompañamos a nuestros clientes desde la asesoría inicial hasta el mantenimiento post-venta.",
+    titulo: "Trabajo en equipo",
+    desc: "Fomentamos la colaboración y el respeto entre nuestros colaboradores para lograr mejores resultados.",
+    icon: Users,
+  },
+  {
+    titulo: "Calidad",
+    desc: "Trabajamos con altos estándares de ingeniería para ofrecer productos y servicios duraderos, eficientes y de alto rendimiento.",
     icon: Award,
   },
   {
-    titulo: "Equipo Experto",
-    desc: "Contamos con ingenieros y técnicos altamente capacitados en soluciones verticales.",
-    icon: Users,
+    titulo: "Innovación",
+    desc: "Impulsamos el uso de tecnología y mejoras continuas para desarrollar soluciones modernas y eficientes.",
+    icon: Cpu,
+  },
+  {
+    titulo: "Compromiso",
+    desc: "Cumplimos con responsabilidad cada proyecto, brindando soluciones que satisfagan las necesidades de nuestros clientes.",
+    icon: Handshake,
+  },
+  {
+    titulo: "Integridad",
+    desc: "Actuamos con honestidad, transparencia y ética en todas nuestras relaciones profesionales y comerciales.",
+    icon: Scale,
   },
 ];
 
@@ -45,7 +55,7 @@ export default function NosotrosPage() {
             Sobre <span className="text-accent">ASCMET</span>
           </motion.h1>
           <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light">
-            Ingeniería peruana transformando la movilidad vertical a través de precisión, seguridad y fabricación a medida.
+            "No solo fabricamos elevadores, elevamos estándares de vida y seguridad."
           </p>
         </div>
       </section>
@@ -59,16 +69,13 @@ export default function NosotrosPage() {
             
             <div className="bg-white p-8 md:p-14 rounded-2xl shadow-2xl border border-border relative z-10">
               <h2 className="text-3xl md:text-4xl font-black text-primary mb-8 uppercase tracking-tight">
-                Nuestra Trayectoria
+                Somos
               </h2>
-              <p className="text-body-text text-lg leading-relaxed mb-6 italic border-l-4 border-primary pl-6 py-2">
-                "No solo fabricamos elevadores, elevamos estándares de vida y seguridad."
-              </p>
               <p className="text-body-text text-lg leading-relaxed mb-6">
-                En **ASCMET**, nacimos con el propósito de ofrecer soluciones de elevación que combinen la robustez industrial con la elegancia arquitectónica. 
+                Una empresa especializada en el diseño, fabricación, instalación y modernización de elevadores, montacargas y plataformas para personas con discapacidad. 
               </p>
               <p className="text-body-text text-lg leading-relaxed">
-                Cada proyecto es un desafío de ingeniería que abordamos con pasión, asegurando que cada equipo sea una pieza fundamental de la infraestructura de nuestros clientes.
+                Garantizamos soluciones de elevación seguras, eficientes y adaptadas a las necesidades de cada cliente.
               </p>
             </div>
           </div>
@@ -85,16 +92,18 @@ export default function NosotrosPage() {
             
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                "Diseño Estructural 3D",
-                "Fabricación Local",
-                "Certificación EN 81-20",
-                "Soporte Técnico 24/7",
-                "Acabados Premium",
-                "Ahorro Energético"
+                "Asesoría y acompañamiento profesional",
+                "Ingeniería y desarrollo especializado",
+                "Proyectos a medida",
+                "Soluciones integrales",
+                "Alta calidad y seguridad",
+                "Tecnología y seguridad",
+                "Cumplimiento normativo y estándares de calidad",
+                "Compromiso y confianza"
               ].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-lg text-primary font-bold">
-                  <CheckCircle2 className="text-accent shrink-0" size={24} />
-                  {item}
+                <li key={i} className="flex items-start gap-3 text-base text-primary font-bold">
+                  <CheckCircle2 className="text-accent shrink-0 mt-0.5" size={24} />
+                  <span className="leading-tight">{item}</span>
                 </li>
               ))}
             </ul>
@@ -118,7 +127,7 @@ export default function NosotrosPage() {
               <h3 className="text-3xl lg:text-4xl font-black mb-6 uppercase tracking-tighter text-white">Nuestra Misión</h3>
               <div className="w-12 h-1 bg-accent mb-8"></div>
               <p className="text-lg lg:text-xl text-white/80 leading-relaxed font-light">
-                Diseñar, fabricar e instalar sistemas de elevación excepcionalmente seguros y eficientes. Estamos comprometidos con derribar barreras arquitectónicas promoviendo la accesibilidad universal en el Perú. Logramos esto a través de ingeniería de precisión, cumplimiento estricto de normativas y un servicio al cliente humano y transparente.
+                Nuestra misión es desarrollar soluciones de transporte vertical seguras y eficientes, integrando ingeniería, tecnología e innovación para mejorar la accesibilidad y funcionalidad de los espacios, ofreciendo sistemas de elevación adaptados a las necesidades de cada cliente.
               </p>
             </div>
 
@@ -130,7 +139,7 @@ export default function NosotrosPage() {
               <h3 className="text-3xl lg:text-4xl font-black mb-6 uppercase tracking-tighter text-white">Nuestra Visión</h3>
               <div className="w-12 h-1 bg-accent mb-8"></div>
               <p className="text-lg lg:text-xl text-white/80 leading-relaxed font-light">
-                Ser el principal referente y la empresa de mayor confianza en soluciones de movilidad vertical a nivel nacional. Aspiramos a ser el socio estratégico ideal para las constructoras y familias peruanas, desarrollando un catálogo de elevadores que sean un sinónimo inquebrantable de innovación tecnológica, estética y, sobre todo, máxima seguridad.
+                En los próximos 5 años, ASCMET busca consolidarse como una empresa líder en soluciones de elevación, reconocida por su innovación, calidad y excelencia, contribuyendo al desarrollo de infraestructuras modernas y seguras.
               </p>
             </div>
 
@@ -147,7 +156,7 @@ export default function NosotrosPage() {
           <div className="w-24 h-1.5 bg-accent mx-auto mt-6"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {valores.map((v, i) => (
             <div 
               key={i} 
