@@ -124,7 +124,7 @@ export default function NosotrosPage() {
               <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center mb-8 text-accent shadow-[0_0_30px_rgba(0,163,224,0.15)]">
                 <Target size={36} />
               </div>
-              <h3 className="text-3xl lg:text-4xl font-black mb-6 uppercase tracking-tighter text-white">Nuestra Misión</h3>
+              <h3 className="text-3xl lg:text-4xl font-black mb-6 uppercase tracking-tighter text-white">Misión</h3>
               <div className="w-12 h-1 bg-accent mb-8"></div>
               <p className="text-lg lg:text-xl text-white/80 leading-relaxed font-light">
                 Nuestra misión es desarrollar soluciones de transporte vertical seguras y eficientes, integrando ingeniería, tecnología e innovación para mejorar la accesibilidad y funcionalidad de los espacios, ofreciendo sistemas de elevación adaptados a las necesidades de cada cliente.
@@ -136,7 +136,7 @@ export default function NosotrosPage() {
               <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center mb-8 text-accent shadow-[0_0_30px_rgba(0,163,224,0.15)]">
                 <Eye size={36} />
               </div>
-              <h3 className="text-3xl lg:text-4xl font-black mb-6 uppercase tracking-tighter text-white">Nuestra Visión</h3>
+              <h3 className="text-3xl lg:text-4xl font-black mb-6 uppercase tracking-tighter text-white">Visión</h3>
               <div className="w-12 h-1 bg-accent mb-8"></div>
               <p className="text-lg lg:text-xl text-white/80 leading-relaxed font-light">
                 En los próximos 5 años, ASCMET busca consolidarse como una empresa líder en soluciones de elevación, reconocida por su innovación, calidad y excelencia, contribuyendo al desarrollo de infraestructuras modernas y seguras.
