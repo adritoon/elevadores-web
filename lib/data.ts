@@ -1,4 +1,15 @@
-export const servicios = [
+export type Servicio = {
+  slug: string;
+  titulo: string;
+  descripcion: string;
+  icono: string;
+  caracteristicas?: string[];
+  galeria?: string[];
+  imagen?: string;
+  detalleLargo?: string;
+};
+
+export const servicios: Servicio[] = [
   {
     slug: "diseno-e-ingenieria",
     titulo: "Diseño e Ingeniería",
