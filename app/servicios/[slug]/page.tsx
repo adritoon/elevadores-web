@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { servicios } from "../../../lib/data";
 import Link from "next/link";
@@ -5,6 +6,38 @@ import Image from "next/image";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import ScrollReveal from "../../../components/ScrollReveal";
 import CarouselServicios from "../../../components/CarouselServicios";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const servicio = servicios.find((s) => s.slug === slug);
+  
+  if (!servicio) {
+    return { title: "Servicio no encontrado | ElevadoresPro" };
+  }
+
+  const imageUrl = servicio.galeria?.[0] || servicio.imagen;
+
+  return {
+    title: servicio.titulo,
+    description: servicio.descripcion,
+    openGraph: {
+      title: `${servicio.titulo} | ElevadoresPro`,
+      description: servicio.descripcion,
+      images: imageUrl ? [
+        {
+          url: imageUrl,
+          width: 800,
+          height: 600,
+          alt: servicio.titulo,
+        }
+      ] : undefined,
+    },
+  };
+}
 
 export default async function SubpaginaServicio({
   params,

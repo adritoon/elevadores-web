@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { productos } from "../../../lib/data";
 import Link from "next/link";
@@ -5,6 +6,36 @@ import { ArrowLeft, CheckCircle2, ShieldCheck } from "lucide-react";
 import GaleriaInteractiva from "../../../components/GaleriaInteractiva";
 import BotonCotizar from "../../../components/BotonCotizar";
 import ScrollReveal from "../../../components/ScrollReveal";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const producto = productos.find((p) => p.slug === slug);
+  
+  if (!producto) {
+    return { title: "Producto no encontrado | ASCMET" };
+  }
+
+  return {
+    title: producto.titulo,
+    description: producto.descripcion,
+    openGraph: {
+      title: `${producto.titulo} | ASCMET`,
+      description: producto.descripcion,
+      images: producto.galeria?.[0]?.imagen ? [
+        {
+          url: producto.galeria[0].imagen,
+          width: 800,
+          height: 600,
+          alt: producto.titulo,
+        }
+      ] : undefined,
+    },
+  };
+}
 
 export default async function SubpaginaProducto({
   params,
