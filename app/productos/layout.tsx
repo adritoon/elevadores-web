@@ -1,7 +1,10 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Productos',
+  title: {
+    default: 'Productos',
+    template: '%s | ASCMET',
+  },
   description: 'Catálogo de soluciones de elevación, accesibilidad, ascensores y plataformas diseñadas con altos estándares.',
 };
 

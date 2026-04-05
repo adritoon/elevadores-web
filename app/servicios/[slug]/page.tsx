@@ -16,7 +16,7 @@ export async function generateMetadata({
   const servicio = servicios.find((s) => s.slug === slug);
   
   if (!servicio) {
-    return { title: "Servicio no encontrado | ElevadoresPro" };
+    return { title: "Servicio no encontrado" };
   }
 
   const imageUrl = servicio.galeria?.[0] || servicio.imagen;
@@ -25,7 +25,7 @@ export async function generateMetadata({
     title: servicio.titulo,
     description: servicio.descripcion,
     openGraph: {
-      title: `${servicio.titulo} | ElevadoresPro`,
+      title: `${servicio.titulo} | ASCMET`,
       description: servicio.descripcion,
       images: imageUrl ? [
         {

@@ -16,7 +16,7 @@ export async function generateMetadata({
   const producto = productos.find((p) => p.slug === slug);
   
   if (!producto) {
-    return { title: "Producto no encontrado | ASCMET" };
+    return { title: "Producto no encontrado" };
   }
 
   return {

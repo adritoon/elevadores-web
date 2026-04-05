@@ -1,7 +1,10 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Servicios',
+  title: {
+    default: 'Servicios',
+    template: '%s | ASCMET',
+  },
   description: 'Conoce nuestros servicios especializados: diseño, ingeniería, fabricación, instalación y mantenimiento de elevadores.',
 };
 
