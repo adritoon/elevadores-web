@@ -4,6 +4,18 @@ export const servicios = [
     titulo: "Diseño e Ingeniería",
     descripcion: "Desarrollamos proyectos de ingeniería y diseño especializado, respaldados por un equipo profesional altamente capacitado, orientado a ofrecer soluciones seguras, eficientes y de alto nivel técnico.",
     icono: "Ruler",
+    caracteristicas: [
+      "Estudios de tráfico vertical para optimizar el desempeño de los elevadores.",
+      "Elaboración de planos técnicos para la correcta ejecución del proyecto.",
+      "Diseño personalizado de cabinas y acabados con visualización 3D previa a su fabricación.",
+      "Garantizamos el cumplimiento de normas técnicas, seguridad y accesibilidad en cada proyecto."
+    ],
+    galeria: [
+      "/servicios/diseño1.jpg",
+      "/servicios/diseño2.jpg",
+      "/servicios/diseño3.jpg",
+      "/servicios/diseño4.jpg"
+    ]
   },
   {
     slug: "fabricacion",
@@ -11,12 +23,16 @@ export const servicios = [
     descripcion: "Fabricamos los componentes de cada proyecto con altos estándares de calidad, seguridad y responsabilidad ambiental, garantizando soluciones de elevación confiables, eficientes y duraderas.",
     icono: "Factory",
     imagen: "/servicios/linda.png",
-    detalleLargo: "Nuestra planta de fabricación cuenta con maquinaria CNC de última generación. Cada cabina es diseñada y construida según las especificaciones exactas del pozo de su edificio, asegurando que no se pierda ni un centímetro de espacio útil.",
+    /*detalleLargo: "Nuestra planta de fabricación cuenta con maquinaria CNC de última generación. Cada cabina es diseñada y construida según las especificaciones exactas del pozo de su edificio, asegurando que no se pierda ni un centímetro de espacio útil.",*/
     caracteristicas: [
-      "Acero inoxidable de grado quirúrgico.",
-      "Sistemas de tracción ultra-silenciosos.",
-      "Iluminación LED de bajo consumo.",
-      "Pantallas de cristal líquido personalizables."
+      "Fabricación de cabinas de ascensor con materiales y acabados personalizados, adaptados a las especificaciones de cada proyecto.",
+      "Fabricación de chasis, bastidores y estructuras metálicas para montacargas, elevadores y plataformas para personas con discapacidad.",
+      "Fabricación de puertas de cabina y piso, con sistemas manuales o automáticos.",
+      "Control de calidad en materiales, soldaduras y dimensiones para garantizar el cumplimiento de los estándares de seguridad."
+    ],
+    galeria: [
+      "/servicios/fabricacion1.webp",
+      "/servicios/fabricacion2.webp"
     ]
   },
   {
@@ -24,18 +40,55 @@ export const servicios = [
     titulo: "Instalación",
     descripcion: "Realizamos la instalación de plataforma para personas con discapacidad, elevadores y montacargas con técnicos profesionales, garantizando seguridad, eficiencia y correcto funcionamiento.",
     icono: "Wrench",
+    caracteristicas: [
+      "Instalación de la estructura del ascensor.",
+      "Instalación de la cabina y contrapeso.",
+      "Montaje del sistema de tracción.",
+      "Instalación de puertas de cabina y de piso.",
+      "Instalación del sistema eléctrico y de control.",
+      "Configuración y programación del sistema.",
+      "Pruebas de funcionamiento y seguridad.",
+      "Puesta en marcha del elevador."
+    ],
+    galeria: [
+      "/servicios/instalacion1.png",
+      "/servicios/instalacion2.png",
+      "/servicios/instalacion3.jpg",
+      "/servicios/instalacion4.jpg"
+    ]
   },
   {
     slug: "modernizacion",
     titulo: "Modernización",
     descripcion: "Actualizamos y optimizamos sistemas de elevación existentes, mejorando su tecnología, seguridad y rendimiento.",
     icono: "RefreshCw",
+    caracteristicas: [
+      "Modernización técnica del equipo.",
+      "Modernización de cabina.",
+      "Modernización de sistemas electrónicos y de control.",
+      "Mejora de Seguridad.",
+      "Eficiencia Energética."
+    ],
+    galeria: [
+      "/servicios/modernizacion1.jpg"
+    ]
   },
   {
-    slug: "asesoria-tecnica-especializada",
-    titulo: "Asesoría técnica especializada",
-    descripcion: "Brindamos asesoramiento profesional para seleccionar la mejor solución de elevación según las necesidades de cada cliente y proyecto.",
+    slug: "asesoria-ventas-especializada",
+    titulo: "Asesoría de ventas especializada",
+    descripcion: "Las asesorías de ventas en una empresa de ascensores consisten en orientar al cliente para elegir la solución de elevación más adecuada según su proyecto, el tipo de edificio y su presupuesto, mediante evaluación de necesidades y recomendaciones técnicas.",
     icono: "Headset",
+    caracteristicas: [
+      "Asesoría de medidas y espacio.",
+      "Cotización y propuesta técnica.",
+      "Asesoría en modernización de ascensores.",
+      "Asesoría en accesibilidad.",
+      "Asesoría en eficiencia y tecnología.",
+      "Asesoría en mantenimiento y postventa."
+    ],
+    galeria: [
+      "/servicios/asesoria1.jpg"
+    ]
   },
 ];
 

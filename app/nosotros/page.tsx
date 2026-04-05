@@ -3,11 +3,12 @@
 import { ShieldCheck, Cpu, Users, Award, CheckCircle2, ArrowRight, Target, Eye, Handshake, Scale } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ScrollReveal from "../../components/ScrollReveal";
 
 const valores = [
   {
     titulo: "Seguridad",
-    desc: "Priorizamos la seguridad en nuestros procesos, equipos y servicios para proteger a nuestros clientes y colaboradores.",
+    desc: "Priorizamos la seguridad en cada uno de nuestros procesos, equipos y servicios, garantizando la protección de nuestros clientes y colaboradores.",
     icon: ShieldCheck,
   },
   {
@@ -62,7 +63,7 @@ export default function NosotrosPage() {
 
       {/* Sección Trayectoria con Grid mejorado */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <ScrollReveal className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="relative">
             {/* Decoración: Marco metálico */}
             <div className="absolute -top-6 -left-6 w-32 h-32 border-t-4 border-l-4 border-accent opacity-30"></div>
@@ -85,36 +86,35 @@ export default function NosotrosPage() {
                <h3 className="text-2xl font-bold text-primary uppercase tracking-widest text-sm opacity-60">
                 Por qué elegirnos
               </h3>
-              <p className="text-3xl font-extrabold text-primary leading-tight">
+              {/*<p className="text-3xl font-extrabold text-primary leading-tight">
                 Infraestructura propia para resultados superiores.
-              </p>
+              </p>*/}
             </div>
             
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 "Asesoría y acompañamiento profesional",
                 "Ingeniería y desarrollo especializado",
-                "Proyectos a medida",
+                "Adaptamos nuestros proyectos a las dimensiones existentes en la obra",
                 "Soluciones integrales",
-                "Alta calidad y seguridad",
                 "Tecnología y seguridad",
                 "Cumplimiento normativo y estándares de calidad",
                 "Compromiso y confianza"
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-base text-primary font-bold">
-                  <CheckCircle2 className="text-accent shrink-0 mt-0.5" size={24} />
-                  <span className="leading-tight">{item}</span>
+                  <CheckCircle2 className="text-accent shrink-0 mt-[2px]" size={20} />
+                  <span className="leading-snug">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Sección Misión y Visión (En Color Corporativo Principal) */}
       <section className="py-24 bg-primary text-white border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 relative">
+          <ScrollReveal className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 relative">
             
             {/* Divisor vertical en pantallas grandes */}
             <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-3/4 bg-white/10"></div>
@@ -143,24 +143,25 @@ export default function NosotrosPage() {
               </p>
             </div>
 
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Sección Valores (Cards Modernas) */}
       <section className="py-24 bg-secondary/30 border-y border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
+        <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-black text-primary uppercase tracking-tighter">
             Valores que nos impulsan
           </h2>
           <div className="w-24 h-1.5 bg-accent mx-auto mt-6"></div>
-        </div>
+        </ScrollReveal>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {valores.map((v, i) => (
-            <div 
+            <ScrollReveal 
               key={i} 
-              className="group bg-white p-10 rounded-2xl border border-border hover:border-primary/50 transition-all hover:-translate-y-2 shadow-sm hover:shadow-2xl overflow-hidden relative"
+              delay={i * 0.1}
+              className="group bg-white p-10 rounded-2xl border border-border hover:border-primary/50 transition-all hover:-translate-y-2 shadow-sm hover:shadow-2xl overflow-hidden relative h-full"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
               
@@ -169,14 +170,14 @@ export default function NosotrosPage() {
               </div>
               <h4 className="text-2xl font-bold text-primary mb-4">{v.titulo}</h4>
               <p className="text-body-text opacity-80 leading-relaxed text-lg">{v.desc}</p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
       {/* CTA Final de Alto Impacto */}
       <section className="py-28 relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+        <ScrollReveal className="max-w-5xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl md:text-6xl font-black text-primary mb-8 tracking-tighter">
             ¿LISTO PARA ELEVAR TU PROYECTO?
           </h2>
@@ -189,7 +190,7 @@ export default function NosotrosPage() {
           >
             Hablar con un experto <ArrowRight size={20} />
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   );

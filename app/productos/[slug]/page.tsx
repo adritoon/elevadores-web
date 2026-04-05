@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, CheckCircle2, ShieldCheck } from "lucide-react";
 import GaleriaInteractiva from "../../../components/GaleriaInteractiva";
 import BotonCotizar from "../../../components/BotonCotizar";
+import ScrollReveal from "../../../components/ScrollReveal";
 
 export default async function SubpaginaProducto({
   params,
@@ -29,7 +30,7 @@ export default async function SubpaginaProducto({
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
           {/* Lado Izquierdo: Info Principal */}
-          <div className="space-y-8">
+          <ScrollReveal delay={0.1} className="space-y-8">
             <div className="space-y-4">
               {/* CORRECCIÓN: Tamaño de fuente responsivo para evitar overflow horizontal en móviles */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight uppercase tracking-tighter">
@@ -52,10 +53,10 @@ export default async function SubpaginaProducto({
                 Respuesta técnica en menos de 24 horas.
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* CORRECCIÓN 2: Lado Derecho - Tarjeta en Azul Profundo (bg-primary) */}
-          <div className="bg-primary p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
+          <ScrollReveal delay={0.3} className="bg-primary p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden h-full">
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
 
             <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
@@ -64,11 +65,11 @@ export default async function SubpaginaProducto({
 
             <ul className="space-y-5">
               {(producto.specs || ["Consultar especificaciones técnicas"]).map((item, i) => (
-                <li key={i} className="flex items-center gap-4 text-white group">
-                  <div className="bg-accent/20 p-1 rounded-md shrink-0">
+                <li key={i} className="flex items-start gap-4 text-white group">
+                  <div className="bg-accent/20 p-1 rounded-md shrink-0 mt-0.5">
                     <CheckCircle2 size={18} className="text-accent" />
                   </div>
-                  <span className="text-lg font-medium leading-tight opacity-90">{item}</span>
+                  <span className="text-lg font-medium leading-relaxed opacity-90">{item}</span>
                 </li>
               ))}
             </ul>
@@ -76,18 +77,18 @@ export default async function SubpaginaProducto({
             <div className="mt-10 pt-8 border-t border-white/10 text-xs text-white/40 uppercase tracking-[0.2em] font-bold">
               ASCMET • Ingeniería de Elevación
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Galería de Modelos */}
         {producto.galeria && (
           <section className="border-t border-gray-100 pt-20">
-            <div className="text-center mb-12">
+            <ScrollReveal className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black text-primary uppercase tracking-tighter">
                 Modelos y Variantes
               </h2>
               <p className="text-body-text opacity-60 mt-2">Seleccione un modelo para ver detalles específicos</p>
-            </div>
+            </ScrollReveal>
 
             <GaleriaInteractiva
               items={producto.galeria}

@@ -10,6 +10,7 @@ import {
   Warehouse, 
   Cpu 
 } from "lucide-react";
+import ScrollReveal from "../../components/ScrollReveal";
 
 // Mapeo de iconos para que cada producto tenga su propia identidad visual
 // Asegúrate de poner estos nombres en el campo 'icono' de tu lib/data.ts
@@ -27,7 +28,7 @@ export default function ProductosPage() {
     <section className="pt-32 pb-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16">
+        <ScrollReveal className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4 uppercase tracking-tight">
             Catálogo de Productos
           </h1>
@@ -35,39 +36,40 @@ export default function ProductosPage() {
           <p className="text-lg text-body-text opacity-80 max-w-2xl mx-auto leading-relaxed">
             Soluciones de accesibilidad y elevación diseñadas con los más altos estándares de ingeniería y seguridad.
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {productos.map((producto) => {
+          {productos.map((producto, index) => {
             // Si no hay icono definido, usamos Box por defecto
             const IconComponent = IconMap[(producto as any).icono] || Box;
             
             return (
-              <Link 
-                key={producto.slug} 
-                href={`/productos/${producto.slug}`}
-                className="group bg-white border border-border p-8 rounded-xl shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col h-full relative overflow-hidden"
-              >
-                {/* Línea decorativa lateral */}
-                <div className="absolute top-0 left-0 w-1 h-0 bg-primary group-hover:h-full transition-all duration-300"></div>
+              <ScrollReveal key={producto.slug} delay={index * 0.1}>
+                <Link 
+                  href={`/productos/${producto.slug}`}
+                  className="group bg-white border border-border p-8 rounded-xl shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col h-full relative overflow-hidden block w-full h-full"
+                >
+                  {/* Línea decorativa lateral */}
+                  <div className="absolute top-0 left-0 w-1 h-0 bg-primary group-hover:h-full transition-all duration-300"></div>
 
-                <div className="w-14 h-14 bg-secondary text-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
-                  <IconComponent size={28} />
-                </div>
-                
-                <h3 className="text-2xl font-bold mb-4 text-primary">
-                  {producto.titulo}
-                </h3>
-                
-                <p className="text-body-text opacity-70 mb-8 flex-grow leading-relaxed line-clamp-4">
-                  {producto.descripcion}
-                </p>
-                
-                <div className="mt-auto flex items-center text-primary font-extrabold text-sm uppercase tracking-wider group-hover:text-accent transition-colors">
-                  Explorar Modelos 
-                  <ArrowRight size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
-                </div>
-              </Link>
+                  <div className="w-14 h-14 bg-secondary text-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+                    <IconComponent size={28} />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold mb-4 text-primary">
+                    {producto.titulo}
+                  </h3>
+                  
+                  <p className="text-body-text opacity-70 mb-8 flex-grow leading-relaxed line-clamp-4">
+                    {producto.descripcion}
+                  </p>
+                  
+                  <div className="mt-auto flex items-center text-primary font-extrabold text-sm uppercase tracking-wider group-hover:text-accent transition-colors">
+                    Explorar Modelos 
+                    <ArrowRight size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                  </div>
+                </Link>
+              </ScrollReveal>
             );
           })}
         </div>
