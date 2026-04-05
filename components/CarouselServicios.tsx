@@ -63,6 +63,7 @@ export default function CarouselServicios({
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+      setModalLoaded(false); // Fuerza a que las flechas aparezcan instantáneamente en la próxima apertura
     }
     return () => {
       document.body.style.overflow = "";
@@ -155,14 +156,15 @@ export default function CarouselServicios({
               >
                 <X size={32} />
               </button>
-              <div className="relative w-full h-full max-w-6xl max-h-[90vh]">
-                <Image
+              <div 
+                className="relative w-full h-full max-w-6xl max-h-[90vh] flex items-center justify-center cursor-zoom-out"
+                onClick={() => setIsModalOpen(false)}
+              >
+                <img
                   src={imagenes[0]}
                   alt="Imagen Ampliada"
-                  fill
-                  className="object-contain"
-                  sizes="100vw"
-                  priority
+                  className="max-w-full max-h-full w-auto h-auto rounded-lg cursor-default"
+                  onClick={(e) => e.stopPropagation()}
                 />
               </div>
             </motion.div>
@@ -256,19 +258,19 @@ export default function CarouselServicios({
             </button>
 
             {/* Slider interno modo Lightbox (object-contain) */}
-            <div className="relative w-full h-[85vh] md:h-screen md:max-w-7xl mx-auto flex items-center">
-              <div ref={modalSliderRef} className="keen-slider h-full w-full">
+            <div 
+              className="relative w-full h-[85vh] md:h-screen md:max-w-7xl mx-auto flex items-center"
+            >
+              <div ref={modalSliderRef} className="keen-slider h-full w-full cursor-zoom-out">
                 {imagenes.map((imgSrc, idx) => (
-                  <div className="keen-slider__slide relative w-full h-full flex items-center justify-center" key={idx}>
-                    <div className="relative w-full h-full p-4 md:p-12">
-                      <Image
+                  <div className="keen-slider__slide relative w-full h-full flex items-center justify-center" key={idx} onClick={() => setIsModalOpen(false)}>
+                    <div className="relative w-full h-full p-4 md:p-12 flex items-center justify-center">
+                      <img
                         src={imgSrc}
                         alt={`Slide ampliado ${idx + 1}`}
-                        fill
-                        className="object-contain"
-                        sizes="100vw"
-                        priority
+                        className="max-w-full max-h-full w-auto h-auto rounded-lg cursor-default"
                         draggable={false}
+                        onClick={(e) => e.stopPropagation()}
                       />
                     </div>
                   </div>
