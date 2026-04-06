@@ -10,7 +10,7 @@ const slides = [
   { texto: "Diseño", imagen: "/hero/diseño.png" },
   { texto: "Fabricación", imagen: "/hero/fabricacion.png" },
   { texto: "Instalación", imagen: "/hero/instalacion.webp" },
-  { texto: "Modernización", imagen: "/hero/modernizacion.jpg" },
+  { texto: "Modernización", imagen: "/hero/modernizacion.webp" },
 ];
 
 export default function Hero() {

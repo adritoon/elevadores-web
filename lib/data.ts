@@ -22,8 +22,8 @@ export const servicios: Servicio[] = [
       "Garantizamos el cumplimiento de normas técnicas, seguridad y accesibilidad en cada proyecto."
     ],
     galeria: [
-      "/servicios/diseño1.jpg",
-      "/servicios/diseño2.jpg",
+      "/servicios/diseño1.webp",
+      "/servicios/diseño2.webp",
       "/servicios/diseño3.jpg",
       "/servicios/diseño4.jpg"
     ]
