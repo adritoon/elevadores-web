@@ -1,13 +1,13 @@
 import Hero from "../components/Hero";
+import EtapasProyecto from "../components/EtapasProyecto";
+import CallToAction from "../components/CallToAction";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      {/* Aquí abajo irán otros componentes en el futuro, como: */}
-      {/* <FeaturesSection /> */}
-      {/* <Testimonials /> */}
-      {/* <ContactCTA /> */}
+      <EtapasProyecto />
+      <CallToAction />
     </>
   );
 }
