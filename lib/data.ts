@@ -107,36 +107,53 @@ export const productos = [
   {
     slug: "plataforma-para-discapacitados",
     titulo: "Plataforma para Discapacitados",
-    descripcion: "Nuestra línea de plataformas accesibles diseñados para integrarse perfectamente en cualquier entorno.",
-    icono: "Accessibility", // <--- AGREGADO
+    descripcion: "Nuestra plataforma para personas con discapacidad brinda una solución segura y eficiente para conectar diferentes niveles en viviendas, edificios y espacios comerciales. Diseñada para personas con movilidad reducida, su sistema hidráulico y estructura robusta garantizan un desplazamiento cómodo, mejorando la accesibilidad y la autonomía de los usuarios.",
+    icono: "Accessibility",
     specs: [
-      "Cumplimiento Norma A.120",
-      "Nos adecuamos a las dimensiones",
-      "Botonera en sistema Braille",
-      "Nivelación de alta precisión"
+      "Capacidad de carga de 180kg",
+      "Diseño adaptable a diferentes espacios",
+      "Sistema de paracaídas",
+      "Alarma de emergencia integrada",
+      "Su funcionamiento a presión constante o automático.",
+      "Barandas de protección en acero inoxidable",
+      "Puertas vidriadas o barandas con un sistema de bloqueo",
+      "Botón de parada de emergencia",
+      "Superficie antideslizante",
+      "Bajo consumo energético"
     ],
     galeria: [
       {
-        id: "modelo-a",
-        imagen: "/productos/PPD/modelo-a.png",
-        nombre: "Modelo Cristal Elegance",
-        //precio: "Desde $15,000",
+        id: "modelo-PLAT-1001",
+        imagen: "/productos/plataformas/plataforma1.jpg",
+        nombre: "Plataforma 1001",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
       {
-        id: "modelo-c",
-        imagen: "/productos/PPD/modelo-c.png",
-        nombre: "Modelo Cristal Poor",
-        //precio: "Desde $12,000",
+        id: "modelo-PLAT-1002",
+        imagen: "/productos/plataformas/plataforma2.jpg",
+        nombre: "Plataforma 1002",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
       {
-        id: "modelo-b",
-        imagen: "/productos/PPD/modelo-b.png",
-        nombre: "Modelo Acero Inox",
-        //precio: "Desde $12,500",
+        id: "modelo-PLAT-1003",
+        imagen: "/productos/plataformas/plataforma3.jpg",
+        nombre: "Plataforma 1003",
+        diferencia: "Paredes de cristal templado para máxima iluminación.",
+        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+      },
+      {
+        id: "modelo-PLAT-1004",
+        imagen: "/productos/plataformas/plataforma4.jpg",
+        nombre: "Plataforma 1004",
+        diferencia: "Paredes de cristal templado para máxima iluminación.",
+        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+      },
+      {
+        id: "modelo-PLAT-1005",
+        imagen: "/productos/plataformas/plataforma5.jpg",
+        nombre: "Plataforma 1005",
         diferencia: "Diseño robusto ideal para exteriores o alto tráfico.",
         caracteristicas: ["Capacidad: 500kg", "Resistente a la intemperie", "Botonera braille"]
       }
@@ -145,77 +162,115 @@ export const productos = [
   {
     slug: "elevadores",
     titulo: "Elevadores",
-    descripcion: "Equipos diseñados con cabinas amplias, botoneras accesibles y puertas automáticas, cumpliendo todas las normativas de accesibilidad.",
-    icono: "Warehouse", // <--- AGREGADO (Puedes cambiarlo por Box o Building2 si prefieres)
+    descripcion: "Los elevadores para domicilio facilitan el desplazamiento entre niveles dentro del hogar, brindando comodidad, seguridad y accesibilidad. Su diseño compacto, funcionamiento silencioso y sistemas de seguridad permiten una instalación adaptable, mejorando la movilidad y calidad de vida de los usuarios.",
+    icono: "Building2",
     specs: [
-      "Capacidad desde 500kg hasta 5tn",
-      "Piso de plancha estriada antideslizante",
-      "Estructura autoportante de acero",
-      "Sensores de sobrecarga electrónicos"
+      "Capacidad de carga 180 kg a 250 kg",
+      "Sistema de paracaídas",
+      "Botón de parada de emergencia",
+      "Diseño adaptable a diferentes espacios",
+      "Sistema de elevación hidráulico y electromecánico",
+      "Puertas batientes metálicas o vidriadas con un sistema de bloqueo",
+      "Panel de mando con pulsadores que permite una operación sencilla y segura del equipo",
+      "Bajo consumo energético"
     ],
     galeria: [
       {
-        id: "modelo-a",
-        imagen: "/productos/EPD/modelo-a.png",
-        nombre: "Modelo Cristal Elegance",
-        //precio: "Desde $15,000",
-        diferencia: "Paredes de cristal templado para máxima iluminación.",
-        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+        id: "modelo-ELE-2001",
+        imagen: "/productos/elevadores/eleva1.png",
+        nombre: "Elevador 2001",
+        diferencia: "Diseño compacto ideal para interiores del hogar.",
+        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
       },
       {
-        id: "modelo-c",
-        imagen: "/productos/EPD/modelo-c.png",
-        nombre: "Modelo Cristal Poor",
-        //precio: "Desde $12,000",
-        diferencia: "Paredes de cristal templado para máxima iluminación.",
-        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+        id: "modelo-ELE-2002",
+        imagen: "/productos/elevadores/eleva2.png",
+        nombre: "Elevador 2002",
+        diferencia: "Diseño compacto ideal para interiores del hogar.",
+        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
       },
       {
-        id: "modelo-b",
-        imagen: "/productos/EPD/modelo-b.png",
-        nombre: "Modelo Acero Inox",
-        //precio: "Desde $12,500",
-        diferencia: "Diseño robusto ideal para exteriores o alto tráfico.",
-        caracteristicas: ["Capacidad: 500kg", "Resistente a la intemperie", "Botonera braille"]
+        id: "modelo-ELE-2003",
+        imagen: "/productos/elevadores/eleva3.png",
+        nombre: "Elevador 2003",
+        diferencia: "Diseño compacto ideal para interiores del hogar.",
+        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
+      },
+      {
+        id: "modelo-ELE-2004",
+        imagen: "/productos/elevadores/eleva4.png",
+        nombre: "Elevador 2004",
+        diferencia: "Diseño compacto ideal para interiores del hogar.",
+        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
+      },
+      {
+        id: "modelo-ELE-2005",
+        imagen: "/productos/elevadores/eleva5.png",
+        nombre: "Elevador 2005",
+        diferencia: "Diseño compacto ideal para interiores del hogar.",
+        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
+      },
+      {
+        id: "modelo-ELE-2006",
+        imagen: "/productos/elevadores/eleva6.png",
+        nombre: "Elevador 2006",
+        diferencia: "Acabados premium con puertas de cristal y marcos de acero.",
+        caracteristicas: ["Capacidad: 250kg", "Panel de cristal", "Bajo consumo"]
       }
     ]
   },
   {
     slug: "montacargas",
     titulo: "Montacargas",
-    descripcion: "Equipos diseñados con cabinas amplias, botoneras accesibles y puertas automáticas, cumpliendo todas las normativas de accesibilidad.",
-    icono: "Warehouse", // <--- AGREGADO (Puedes cambiarlo por Box o Building2 si prefieres)
+    descripcion: "Nuestros montacargas están diseñados para transportar mercancías de forma segura, rápida y eficiente entre diferentes niveles. Gracias a su estructura robusta, tecnología confiable y alto rendimiento, optimizan el movimiento de cargas en almacenes, fábricas, comercios y centros logísticos. Ofrecen una solución práctica y segura para mejorar la productividad, reducir tiempos de trabajo y facilitar el manejo de materiales pesados.",
+    icono: "Warehouse",
     specs: [
-      "Capacidad desde 500kg hasta 5tn",
-      "Piso de plancha estriada antideslizante",
-      "Estructura autoportante de acero",
-      "Sensores de sobrecarga electrónicos"
+      "Capacidad de carga de 500 kg a 1000kg",
+      "Estructura resistente y segura",
+      "Diseño adaptable a diferentes espacios",
+      "Alarma de emergencia integrado",
+      "Sistema de elevación hidráulico y electromecánico",
+      "Puertas metálicas con sistema de bloqueo",
+      "Sistema de paracaídas en caso de descenso inesperado",
+      "Panel de mando con pulsadores que permite una operación sencilla y segura del equipo",
+      "Bajo consumo energético"
     ],
     galeria: [
       {
-        id: "modelo-a",
-        imagen: "/productos/EPD/modelo-a.png",
-        nombre: "Modelo Cristal Elegance",
-        //precio: "Desde $15,000",
-        diferencia: "Paredes de cristal templado para máxima iluminación.",
-        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+        id: "modelo-MON-3001",
+        imagen: "/productos/montacargas/montacargas1.jpg",
+        nombre: "Montacargas 3001",
+        diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
+        caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
       },
       {
-        id: "modelo-c",
-        imagen: "/productos/EPD/modelo-c.png",
-        nombre: "Modelo Cristal Poor",
-        //precio: "Desde $12,000",
-        diferencia: "Paredes de cristal templado para máxima iluminación.",
-        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+        id: "modelo-MON-3002",
+        imagen: "/productos/montacargas/montacargas2.png",
+        nombre: "Montacargas 3002",
+        diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
+        caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
       },
       {
-        id: "modelo-b",
-        imagen: "/productos/EPD/modelo-b.png",
-        nombre: "Modelo Acero Inox",
-        //precio: "Desde $12,500",
-        diferencia: "Diseño robusto ideal para exteriores o alto tráfico.",
-        caracteristicas: ["Capacidad: 500kg", "Resistente a la intemperie", "Botonera braille"]
+        id: "modelo-MON-3003",
+        imagen: "/productos/montacargas/montacargas3.jpg",
+        nombre: "Montacargas 3003",
+        diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
+        caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
+      },
+      {
+        id: "modelo-MON-3004",
+        imagen: "/productos/montacargas/montacargas4.png",
+        nombre: "Montacargas 3004",
+        diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
+        caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
+      },
+      {
+        id: "modelo-MON-3005",
+        imagen: "/productos/montacargas/montacargas5.jpg",
+        nombre: "Montacargas 3005",
+        diferencia: "Alto rendimiento para uso rudo y constante en fábricas.",
+        caracteristicas: ["Capacidad: 1000kg", "Piso estriado", "Alarma integrada"]
       }
     ]
-  },
+  }
 ];

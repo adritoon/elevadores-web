@@ -17,7 +17,7 @@ export default function CallToAction() {
           </h2>
           
           <p className="text-xl text-body-text/80 mb-10 leading-relaxed font-medium max-w-2xl mx-auto">
-            Déjanos tus datos y un especialista técnico analizará las necesidades de tu obra para presentarte la solución vertical ideal.
+            Déjanos tus datos y un asesor de ventas se pondrá en contacto contigo a la brevedad para brindarte toda la información y ofrecerte la alternativa perfecta.
           </p>
           
           <Link 

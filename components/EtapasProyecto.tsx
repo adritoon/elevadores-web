@@ -10,7 +10,7 @@ import ScrollReveal from "./ScrollReveal";
 const etapas = [
   {
     id: "01",
-    titulo: "Cálculo y Diseño",
+    titulo: "Diseño",
     desc: "Estudios de tráfico vertical y diseño plano a plano. Nos integramos a tu obra desde el día uno para optimizar el espacio asegurando viabilidad.",
     imagen: "/servicios/diseño1.webp",
     link: "/servicios/diseno-e-ingenieria"
@@ -108,18 +108,13 @@ export default function EtapasProyecto() {
                 {/* Capa imperceptible (5%) solo para asegurar que la tarjeta y bordes destaquen */}
                 <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
                 
-                {/* Tarjeta Flotante Premium (Glassmorphism) - Anclada estáticamente abajo */}
-                <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-12 bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-2xl flex flex-col md:flex-row gap-6 items-start md:items-center justify-between transition-transform duration-500 translate-y-0">
-                  <p className="text-primary text-base md:text-lg font-medium leading-relaxed max-w-md">
-                     {etapas[activeTab].desc}
-                  </p>
-                  
-                  {/* Botón Sólido Corporativo */}
+                {/* Botón Flotante en la Esquina */}
+                <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8">
                   <Link 
                     href={etapas[activeTab].link}
-                    className="shrink-0 inline-flex items-center gap-3 bg-primary text-white px-6 py-4 rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-accent transition-all shadow-md group/btn"
+                    className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-lg font-bold uppercase tracking-widest text-sm hover:bg-accent transition-all shadow-xl group/btn"
                   >
-                    Ver Servicio <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                    Ver Servicio <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </motion.div>

@@ -30,7 +30,7 @@ function FormularioContacto() {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">Contáctanos</h1>
           <p className="text-lg text-body-text opacity-80 max-w-2xl mx-auto">
-            Estamos listos para elevar tu proyecto al siguiente nivel. Solicita una asesoría técnica o cotización hoy mismo.
+            Convierte tu proyecto en una realidad con tecnología avanzada en transporte vertical. Solicita ahora tu asesoría técnica o cotización y conoce la mejor alternativa para tu proyecto.
           </p>
         </div>
 

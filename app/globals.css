@@ -34,6 +34,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-size: 106.25%; /* Aumenta el tamaño base a aprox. 17px (de 16px estándar) */
   }
   
   body {
