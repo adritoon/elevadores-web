@@ -78,28 +78,36 @@ export default function GaleriaInteractiva({
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="relative bg-white w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl z-10 flex flex-col md:flex-row max-h-[90vh] overflow-y-auto"
+              className="relative w-full max-w-4xl rounded-2xl shadow-2xl z-10 flex flex-col md:flex-row max-h-[90vh] overflow-y-auto"
             >
+              {/* Botón cerrar desktop */}
               <button
                 onClick={() => setSeleccionado(null)}
-                className="absolute top-4 right-4 z-20 bg-white/90 p-2 rounded-full text-[#041E42] hover:bg-white hover:scale-110 hover:text-red-500 transition-all shadow-lg"
+                className="hidden md:flex absolute top-4 right-4 z-20 bg-white/90 p-2 rounded-full text-[#041E42] hover:bg-white hover:scale-110 hover:text-red-500 transition-all shadow-lg"
               >
                 <X size={24} />
               </button>
 
-              <div className="relative md:w-1/2 bg-[#041E42] flex items-center justify-center min-h-[260px]">
+              {/* Imagen: sin fondo en móvil (transparente = se ve el backdrop) | fondo oscuro en desktop */}
+              <div className="relative shrink-0 h-56 md:h-auto md:w-1/2 md:min-h-[320px] overflow-hidden">
                 <Image
                   src={seleccionado.imagen}
                   alt={seleccionado.nombre}
-                  width={600}
-                  height={700}
-                  className="object-contain w-full h-full max-h-[70vh]"
-                  style={{ display: 'block' }}
+                  fill
+                  className="object-contain"
                 />
               </div>
 
-              <div className="p-6 md:p-10 md:w-1/2 overflow-y-auto flex flex-col">
-                <h2 className="text-3xl font-extrabold text-primary mb-2">{seleccionado.nombre}</h2>
+              {/* Tarjeta de contenido blanca */}
+              <div className="bg-white p-6 md:p-10 md:w-1/2 flex flex-col rounded-b-2xl md:rounded-b-none md:rounded-r-2xl">
+                {/* Botón cerrar móvil */}
+                <button
+                  onClick={() => setSeleccionado(null)}
+                  className="md:hidden self-end mb-3 bg-gray-100 p-2 rounded-full text-[#041E42] hover:bg-gray-200 hover:text-red-500 transition-all"
+                >
+                  <X size={20} />
+                </button>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-primary mb-2">{seleccionado.nombre}</h2>
 
                 {seleccionado.precio && (
                   <div className="text-xl font-bold text-blue-600 mb-6">{seleccionado.precio}</div>

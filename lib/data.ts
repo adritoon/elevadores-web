@@ -152,7 +152,7 @@ export const productos = [
       },
       {
         id: "modelo-PLAT-1005",
-        imagen: "/productos/plataformas/plataforma5.jpg",
+        imagen: "/productos/plataformas/plataforma5.png",
         nombre: "Plataforma 1005",
         diferencia: "Diseño robusto ideal para exteriores o alto tráfico.",
         caracteristicas: ["Capacidad: 500kg", "Resistente a la intemperie", "Botonera braille"]
@@ -238,7 +238,7 @@ export const productos = [
     galeria: [
       {
         id: "modelo-MON-3001",
-        imagen: "/productos/montacargas/montacargas1.jpg",
+        imagen: "/productos/montacargas/montacargas1.png",
         nombre: "Montacargas 3001",
         diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
         caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
