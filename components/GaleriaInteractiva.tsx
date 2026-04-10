@@ -89,7 +89,7 @@ export default function GaleriaInteractiva({
               </button>
 
               {/* Imagen: sin fondo en móvil (transparente = se ve el backdrop) | fondo oscuro en desktop */}
-              <div className="relative shrink-0 h-56 md:h-auto md:w-1/2 md:min-h-[320px] overflow-hidden">
+              <div className="relative shrink-0 h-56 md:h-auto md:w-1/2 md:min-h-[320px] bg-[#041E42] overflow-hidden">
                 <Image
                   src={seleccionado.imagen}
                   alt={seleccionado.nombre}
