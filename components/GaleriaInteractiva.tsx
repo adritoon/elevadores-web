@@ -78,7 +78,7 @@ export default function GaleriaInteractiva({
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="relative bg-white w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl z-10 flex flex-col md:flex-row max-h-[90vh]"
+              className="relative bg-white w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl z-10 flex flex-col md:flex-row max-h-[90vh] overflow-y-auto"
             >
               <button
                 onClick={() => setSeleccionado(null)}
@@ -87,8 +87,15 @@ export default function GaleriaInteractiva({
                 <X size={24} />
               </button>
 
-              <div className="relative h-64 md:h-auto md:w-1/2 bg-secondary">
-                <Image src={seleccionado.imagen} alt={seleccionado.nombre} fill className="object-cover" />
+              <div className="relative md:w-1/2 bg-[#041E42] flex items-center justify-center min-h-[260px]">
+                <Image
+                  src={seleccionado.imagen}
+                  alt={seleccionado.nombre}
+                  width={600}
+                  height={700}
+                  className="object-contain w-full h-full max-h-[70vh]"
+                  style={{ display: 'block' }}
+                />
               </div>
 
               <div className="p-6 md:p-10 md:w-1/2 overflow-y-auto flex flex-col">
