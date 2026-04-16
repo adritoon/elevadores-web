@@ -36,7 +36,7 @@ export const servicios: Servicio[] = [
     imagen: "/servicios/linda.png",
     /*detalleLargo: "Nuestra planta de fabricación cuenta con maquinaria CNC de última generación. Cada cabina es diseñada y construida según las especificaciones exactas del pozo de su edificio, asegurando que no se pierda ni un centímetro de espacio útil.",*/
     caracteristicas: [
-      "Fabricación de cabinas de ascensor con materiales y acabados personalizados, adaptados a las especificaciones de cada proyecto.",
+      "Fabricación de cabinas de elevadores y montacargas con materiales y acabados personalizados, adaptados a las especificaciones de cada proyecto.",
       "Fabricación de chasis, bastidores y estructuras metálicas para montacargas, elevadores y plataformas para personas con discapacidad.",
       "Fabricación de puertas de cabina y piso, con sistemas manuales o automáticos.",
       "Control de calidad en materiales, soldaduras y dimensiones para garantizar el cumplimiento de los estándares de seguridad."
@@ -124,36 +124,36 @@ export const productos = [
     galeria: [
       {
         id: "modelo-PLAT-1001",
-        imagen: "/productos/plataformas/plataforma1.jpg",
-        nombre: "Plataforma 1001",
+        imagen: "/productos/plataformas/plataforma1.png",
+        nombre: "ASC.PLAT-1001",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
       {
         id: "modelo-PLAT-1002",
         imagen: "/productos/plataformas/plataforma2.jpg",
-        nombre: "Plataforma 1002",
+        nombre: "ASC.PLAT-1002",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
       {
         id: "modelo-PLAT-1003",
         imagen: "/productos/plataformas/plataforma3.jpg",
-        nombre: "Plataforma 1003",
+        nombre: "ASC.PLAT-1003",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
       {
         id: "modelo-PLAT-1004",
         imagen: "/productos/plataformas/plataforma4.jpg",
-        nombre: "Plataforma 1004",
+        nombre: "ASC.PLAT-1004",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
         caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
       },
       {
         id: "modelo-PLAT-1005",
         imagen: "/productos/plataformas/plataforma5.png",
-        nombre: "Plataforma 1005",
+        nombre: "ASC.PLAT-1005",
         diferencia: "Diseño robusto ideal para exteriores o alto tráfico.",
         caracteristicas: ["Capacidad: 500kg", "Resistente a la intemperie", "Botonera braille"]
       }
@@ -177,43 +177,43 @@ export const productos = [
     galeria: [
       {
         id: "modelo-ELE-2001",
-        imagen: "/productos/elevadores/eleva1.png",
-        nombre: "Elevador 2001",
+        imagen: "/productos/elevadores/eleva1.webp",
+        nombre: "ASC.ELE-2001",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
         caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
       },
       {
         id: "modelo-ELE-2002",
-        imagen: "/productos/elevadores/eleva2.png",
-        nombre: "Elevador 2002",
+        imagen: "/productos/elevadores/eleva2.webp",
+        nombre: "ASC.ELE-2002",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
         caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
       },
       {
         id: "modelo-ELE-2003",
-        imagen: "/productos/elevadores/eleva3.png",
-        nombre: "Elevador 2003",
+        imagen: "/productos/elevadores/eleva3.webp",
+        nombre: "ASC.ELE-2003",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
         caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
       },
       {
         id: "modelo-ELE-2004",
-        imagen: "/productos/elevadores/eleva4.png",
-        nombre: "Elevador 2004",
+        imagen: "/productos/elevadores/eleva4.webp",
+        nombre: "ASC.ELE-2004",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
         caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
       },
       {
         id: "modelo-ELE-2005",
         imagen: "/productos/elevadores/eleva5.png",
-        nombre: "Elevador 2005",
+        nombre: "ASC.ELE-2005",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
         caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
       },
       {
         id: "modelo-ELE-2006",
-        imagen: "/productos/elevadores/eleva6.png",
-        nombre: "Elevador 2006",
+        imagen: "/productos/elevadores/eleva6.webp",
+        nombre: "ASC.ELE-2006",
         diferencia: "Acabados premium con puertas de cristal y marcos de acero.",
         caracteristicas: ["Capacidad: 250kg", "Panel de cristal", "Bajo consumo"]
       }
@@ -239,35 +239,35 @@ export const productos = [
       {
         id: "modelo-MON-3001",
         imagen: "/productos/montacargas/montacargas1.png",
-        nombre: "Montacargas 3001",
+        nombre: "ASC.MON-3001",
         diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
         caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
       },
       {
         id: "modelo-MON-3002",
         imagen: "/productos/montacargas/montacargas2.png",
-        nombre: "Montacargas 3002",
+        nombre: "ASC.MON-3002",
         diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
         caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
       },
       {
         id: "modelo-MON-3003",
-        imagen: "/productos/montacargas/montacargas3.jpg",
-        nombre: "Montacargas 3003",
+        imagen: "/productos/montacargas/montacargas3.webp",
+        nombre: "ASC.MON-3003",
         diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
         caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
       },
       {
         id: "modelo-MON-3004",
         imagen: "/productos/montacargas/montacargas4.png",
-        nombre: "Montacargas 3004",
+        nombre: "ASC.MON-3004",
         diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
         caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
       },
       {
         id: "modelo-MON-3005",
         imagen: "/productos/montacargas/montacargas5.jpg",
-        nombre: "Montacargas 3005",
+        nombre: "ASC.MON-3005",
         diferencia: "Alto rendimiento para uso rudo y constante en fábricas.",
         caracteristicas: ["Capacidad: 1000kg", "Piso estriado", "Alarma integrada"]
       }
