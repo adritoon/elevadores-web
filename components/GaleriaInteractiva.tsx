@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, CheckCircle2, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import BotonCotizar from "./BotonCotizar";
 
 type ItemGaleria = {
@@ -224,17 +224,11 @@ export default function GaleriaInteractiva({
                     )}
 
                     <div className="space-y-6 flex-grow">
-                      {seleccionado.diferencia && (
-                        <div className="bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg">
-                          <h4 className="text-xs font-bold text-accent uppercase tracking-widest mb-1 flex items-center gap-2">
-                            <Star size={14} className="text-accent" fill="currentColor" /> Ventaja Destacada
-                          </h4>
-                          <p className="text-primary font-medium italic">&ldquo;{seleccionado.diferencia}&rdquo;</p>
-                        </div>
-                      )}
-
                       {seleccionado.caracteristicas && (
                         <div>
+                          <p className="text-xs text-primary/50 italic mb-4">
+                            Este modelo incluye todas las especificaciones generales de la categoría, además de:
+                          </p>
                           <h4 className="text-xs font-bold text-primary/50 uppercase tracking-widest mb-3">Ficha Técnica</h4>
                           <ul className="space-y-3">
                             {seleccionado.caracteristicas.map((caract, idx) => (

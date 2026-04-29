@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -38,6 +39,7 @@ export default function Header() {
     : "text-primary hover:text-accent";
 
   const logoColor = isHome && !isScrolled ? "text-white" : "text-primary";
+  const logoFilter = isHome && !isScrolled ? "brightness-0 invert" : "brightness-0";
   const dividerColor = isHome && !isScrolled ? "border-white/50" : "border-primary/30";
 
   return (
@@ -46,13 +48,17 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
 
           {/* Logo SCMET */}
-          <Link href="/" className="flex flex-col items-start justify-center group">
-            <span className={`text-3xl sm:text-4xl font-extrabold tracking-tight transition-colors leading-none ${logoColor}`}>
-              ASCMET
+          <Link href="/" className="flex items-center justify-center group">
+            <Image
+              src="/logoascmet.png"
+              alt="ASCMET Logo"
+              width={48}
+              height={48}
+              className={`h-10 w-10 sm:h-12 sm:w-12 object-contain transition-all duration-300 ${logoFilter}`}
+            />
+            <span className={`text-2xl sm:text-3xl font-extrabold tracking-tight transition-colors leading-none ${logoColor}`}>
+              SCMET
             </span>
-            <div className={`text-[10px] sm:text-[11px] font-bold tracking-[0.15em] transition-colors mt-1 opacity-80 ${logoColor}`}>
-              DISEÑO/FABRICACIÓN
-            </div>
           </Link>
 
           {/* Navegación Desktop */}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, ChevronRight } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 
@@ -9,12 +10,19 @@ export default function Footer() {
         
         {/* Columna 1: Logo y Descripción */}
         <div className="flex flex-col">
-          <Link href="/" className="flex items-center gap-3 mb-6 inline-flex group">
-            <span className="text-4xl font-extrabold text-white tracking-tight group-hover:text-accent transition-colors">
-              ASCMET
+          <Link href="/" className="flex items-center mb-6 inline-flex group">
+            <Image
+              src="/logoascmet.png"
+              alt="ASCMET Logo"
+              width={44}
+              height={44}
+              className="h-11 w-11 object-contain brightness-0 invert"
+            />
+            <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight group-hover:text-accent transition-colors">
+              SCMET
             </span>
-            <div className="border-l-2 border-accent h-8 opacity-50"></div>
-            <div className="flex flex-col text-[10px] sm:text-xs font-bold text-accent tracking-widest leading-tight">
+            <div className="border-l-2 border-accent h-8 opacity-50 ml-3"></div>
+            <div className="flex flex-col text-[10px] sm:text-xs font-bold text-accent tracking-widest leading-tight ml-3">
               <span>DISEÑO/</span>
               <span>FABRICACIÓN</span>
             </div>

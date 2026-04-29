@@ -117,7 +117,7 @@ export const productos = [
       "Su funcionamiento a presión constante o automático.",
       "Barandas de protección en acero inoxidable",
       "Puertas vidriadas o barandas con un sistema de bloqueo",
-      "Botón de parada de emergencia",
+      "Pulsador de parada de emergencia",
       "Superficie antideslizante",
       "Bajo consumo energético"
     ],
@@ -127,35 +127,35 @@ export const productos = [
         imagen: "/productos/plataformas/plataforma1.png",
         nombre: "ASC.PLAT-1001",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
-        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+        caracteristicas: ["Embarque 180°", "Puerta batiente vidriado", "Pulsador luminoso en la puerta y plataforma", "Sistema de elevación hidráulico"]
       },
       {
         id: "modelo-PLAT-1002",
         imagen: "/productos/plataformas/plataforma2.jpg",
         nombre: "ASC.PLAT-1002",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
-        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+        caracteristicas: ["Embarque 180°", "Puerta batiente vidriado", "Pulsador luminoso en la puerta y plataforma", "Brazo abatible en la plataforma", "Sistema de elevación hidráulico"]
       },
       {
         id: "modelo-PLAT-1003",
         imagen: "/productos/plataformas/plataforma3.jpg",
         nombre: "ASC.PLAT-1003",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
-        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+        caracteristicas: ["Embarque 180°", "Puerta batiente vidriado", "Pulsador luminoso en la puerta y plataforma", "Laterales de la plataforma vidriados", "Brazo abatible en la plataforma", "Sistema de elevación hidráulico"]
       },
       {
         id: "modelo-PLAT-1004",
         imagen: "/productos/plataformas/plataforma4.jpg",
         nombre: "ASC.PLAT-1004",
         diferencia: "Paredes de cristal templado para máxima iluminación.",
-        caracteristicas: ["Capacidad: 400kg", "Puertas automáticas", "Piso antideslizante"]
+        caracteristicas: ["Embarque 180°", "Puerta batiente con barandas de acero inoxidable", "Pulsador luminoso en la puerta y plataforma", "Laterales con barandas de acero inoxidable", "Brazo abatible en la plataforma", "Sistema de elevación hidráulico"]
       },
       {
         id: "modelo-PLAT-1005",
         imagen: "/productos/plataformas/plataforma5.png",
         nombre: "ASC.PLAT-1005",
         diferencia: "Diseño robusto ideal para exteriores o alto tráfico.",
-        caracteristicas: ["Capacidad: 500kg", "Resistente a la intemperie", "Botonera braille"]
+        caracteristicas: ["Embarque simple", "Puerta batiente con barandas de acero inoxidable", "Pulsador luminoso en la puerta y plataforma", "Laterales con barandas de acero inoxidable", "Sistema de elevación hidráulico"]
       }
     ]
   },
@@ -167,7 +167,7 @@ export const productos = [
     specs: [
       "Capacidad de carga 180 kg a 250 kg",
       "Sistema de paracaídas",
-      "Botón de parada de emergencia",
+      "Pulsador de parada de emergencia",
       "Diseño adaptable a diferentes espacios",
       "Sistema de elevación hidráulico y electromecánico",
       "Puertas batientes metálicas o vidriadas con un sistema de bloqueo",
@@ -180,42 +180,42 @@ export const productos = [
         imagen: "/productos/elevadores/eleva1.webp",
         nombre: "ASC.ELE-2001",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
-        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
+        caracteristicas: ["Embarque simple", "Torre estructural", "Cabina panorámico", "Puertas batiente vidriadas", "Pulsadores luminosos en cabina y puertas", "Sistema de elevación electromecánico"]
       },
       {
         id: "modelo-ELE-2002",
         imagen: "/productos/elevadores/eleva2.webp",
         nombre: "ASC.ELE-2002",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
-        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
+        caracteristicas: ["Embarque 180°", "Torre estructural", "Cabina panorámico", "Puertas batiente vidriadas", "Pulsadores luminosos en cabina y puerta", "Sistema de elevación electromecánico"]
       },
       {
         id: "modelo-ELE-2003",
         imagen: "/productos/elevadores/eleva3.webp",
         nombre: "ASC.ELE-2003",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
-        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
+        caracteristicas: ["Embarque simple", "Torre estructural", "Cabina convencional", "Puertas batiente", "Pulsador luminoso en cabina y puerta", "Sistema de elevación hidráulico"]
       },
       {
         id: "modelo-ELE-2004",
         imagen: "/productos/elevadores/eleva4.webp",
         nombre: "ASC.ELE-2004",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
-        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
+        caracteristicas: ["Embarque simple", "Cabina convencional", "Puertas batiente vidriadas", "Pulsador luminoso en cabina y puerta", "Sistema de elevación electromecánico"]
       },
       {
         id: "modelo-ELE-2005",
         imagen: "/productos/elevadores/eleva5.png",
         nombre: "ASC.ELE-2005",
         diferencia: "Diseño compacto ideal para interiores del hogar.",
-        caracteristicas: ["Capacidad: 250kg", "Sistema silencioso", "Puertas batientes"]
+        caracteristicas: ["Embarque 90°", "Torre estructural", "Cabina panorámico", "Puertas batiente vidriadas", "Pulsadores luminosos en cabina y puerta", "Sistema de elevación electromecánico"]
       },
       {
         id: "modelo-ELE-2006",
         imagen: "/productos/elevadores/eleva6.webp",
         nombre: "ASC.ELE-2006",
         diferencia: "Acabados premium con puertas de cristal y marcos de acero.",
-        caracteristicas: ["Capacidad: 250kg", "Panel de cristal", "Bajo consumo"]
+        caracteristicas: ["Torre estructural", "Cabina convencional", "Puertas batiente vidriadas", "Pulsadores luminosos en cabina y puerta", "Sistema de elevación electromecánico"]
       }
     ]
   },
@@ -241,35 +241,35 @@ export const productos = [
         imagen: "/productos/montacargas/montacargas1.png",
         nombre: "ASC.MON-3001",
         diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
-        caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
+        caracteristicas: ["Torre estructural", "Cabina a media altura", "Puertas batiente", "Pulsador luminoso en la puerta", "Sistema de elevación hidráulico"]
       },
       {
         id: "modelo-MON-3002",
         imagen: "/productos/montacargas/montacargas2.png",
         nombre: "ASC.MON-3002",
         diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
-        caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
+        caracteristicas: ["Cabina convencional", "Puertas batiente", "Pulsador luminoso en la puerta", "Sistema de elevación electromecánico"]
       },
       {
         id: "modelo-MON-3003",
         imagen: "/productos/montacargas/montacargas3.webp",
         nombre: "ASC.MON-3003",
         diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
-        caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
+        caracteristicas: ["Torre estructural", "Cabina a media altura enmallado", "Puertas batiente a media altura enmallado", "Pulsador luminoso en la puerta", "Sistema de elevación electromecánico"]
       },
       {
         id: "modelo-MON-3004",
         imagen: "/productos/montacargas/montacargas4.png",
         nombre: "ASC.MON-3004",
         diferencia: "Estructura autoportante ideal para almacenes de tránsito medio.",
-        caracteristicas: ["Capacidad: 500kg", "Puertas reforzadas", "Sistema de bloqueo"]
+        caracteristicas: ["Torre estructural", "Cabina convencional", "Puertas batiente enmallado", "Pulsadores luminosos en las puertas", "Sistema de elevación electromecánico"]
       },
       {
         id: "modelo-MON-3005",
         imagen: "/productos/montacargas/montacargas5.jpg",
         nombre: "ASC.MON-3005",
         diferencia: "Alto rendimiento para uso rudo y constante en fábricas.",
-        caracteristicas: ["Capacidad: 1000kg", "Piso estriado", "Alarma integrada"]
+        caracteristicas: ["Torre estructural", "Cabina enmallado", "Puertas batiente enmallado", "Pulsador luminoso en la puerta", "Sistema de elevación electromecánico"]
       }
     ]
   }
