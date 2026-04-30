@@ -30,22 +30,22 @@ export default function Header() {
     setMobileSubmenu(mobileSubmenu === menu ? null : menu);
   };
 
-  const headerBg = isHome && !isScrolled
-    ? "bg-transparent border-transparent"
-    : "bg-white border-b border-gray-200 shadow-sm";
+  const headerBg = isOpen || !isHome || isScrolled
+    ? "bg-white border-b border-gray-200 shadow-sm"
+    : "bg-transparent border-transparent";
 
-  const textColor = isHome && !isScrolled
+  const textColor = isHome && !isScrolled && !isOpen
     ? "text-white hover:text-gray-300"
     : "text-primary hover:text-accent";
 
-  const logoColor = isHome && !isScrolled ? "text-white" : "text-primary";
-  const logoFilter = isHome && !isScrolled ? "brightness-0 invert" : "brightness-0";
-  const dividerColor = isHome && !isScrolled ? "border-white/50" : "border-primary/30";
+  const logoColor = isHome && !isScrolled && !isOpen ? "text-white" : "text-primary";
+  const logoFilter = isHome && !isScrolled && !isOpen ? "brightness-0 invert" : "brightness-0";
+  const dividerColor = isHome && !isScrolled && !isOpen ? "border-white/50" : "border-primary/30";
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${headerBg}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center" style={{ height: 'clamp(4.5rem, 5vw + 1rem, 7rem)' }}>
 
           {/* Logo SCMET */}
           <Link href="/" className="flex items-center justify-center group">
@@ -54,21 +54,25 @@ export default function Header() {
               alt="ASCMET Logo"
               width={88}
               height={88}
-              className={`h-[72px] w-[72px] sm:h-[88px] sm:w-[88px] object-contain transition-all duration-300 ${logoFilter}`}
+              className={`object-contain transition-all duration-300 ${logoFilter}`}
+              style={{ height: 'clamp(48px, 5vw + 8px, 88px)', width: 'clamp(48px, 5vw + 8px, 88px)' }}
             />
-            <span className={`text-4xl sm:text-5xl font-extrabold tracking-tight transition-colors leading-none ${logoColor}`}>
+            <span
+              className={`font-extrabold tracking-tight transition-colors leading-none ${logoColor}`}
+              style={{ fontSize: 'clamp(1.8rem, 2.5vw + 0.3rem, 3rem)' }}
+            >
               SCMET
             </span>
           </Link>
 
           {/* Navegación Desktop */}
-          <nav className="hidden md:flex space-x-8 items-center">
-            <Link href="/" className={`${textColor} transition-colors font-medium text-lg`}>Inicio</Link>
-            <Link href="/nosotros" className={`${textColor} transition-colors font-medium text-lg`}>Nosotros</Link>
+          <nav className="hidden md:flex space-x-8 items-center" style={{ fontSize: 'clamp(1rem, 1.2vw + 0.2rem, 1.7rem)' }}>
+            <Link href="/" className={`${textColor} transition-colors font-medium`}>Inicio</Link>
+            <Link href="/nosotros" className={`${textColor} transition-colors font-medium`}>Nosotros</Link>
 
             {/* Desktop Dropdown Servicios */}
-            <div className="relative group py-6">
-              <Link href="/servicios" className={`flex items-center gap-1 ${textColor} transition-colors font-medium text-lg`}>
+            <div className="relative group py-3">
+              <Link href="/servicios" className={`flex items-center gap-1 ${textColor} transition-colors font-medium`}>
                 Servicios <ChevronDown size={18} className="group-hover:rotate-180 transition-transform duration-200" />
               </Link>
               <div className="absolute top-full left-0 w-64 bg-white border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
@@ -81,8 +85,8 @@ export default function Header() {
             </div>
 
             {/* Desktop Dropdown Productos */}
-            <div className="relative group py-6">
-              <Link href="/productos" className={`flex items-center gap-1 ${textColor} transition-colors font-medium text-lg`}>
+            <div className="relative group py-3">
+              <Link href="/productos" className={`flex items-center gap-1 ${textColor} transition-colors font-medium`}>
                 Productos <ChevronDown size={18} className="group-hover:rotate-180 transition-transform duration-200" />
               </Link>
               <div className="absolute top-full left-0 w-72 bg-white border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
@@ -94,7 +98,7 @@ export default function Header() {
               </div>
             </div>
 
-            <Link href="/contacto" className={`${textColor} transition-colors font-medium text-lg`}>Contacto</Link>
+            <Link href="/contacto" className={`${textColor} transition-colors font-medium`}>Contacto</Link>
           </nav>
 
           {/* Botón Menú Móvil */}
@@ -108,7 +112,7 @@ export default function Header() {
 
       {/* Menú Móvil Expandible */}
       {isOpen && (
-        <div className="md:hidden bg-white h-[calc(100vh-96px)] overflow-y-auto absolute w-full left-0 top-24 shadow-2xl border-t border-gray-100">
+        <div className="md:hidden bg-white h-[calc(100vh-4.5rem)] overflow-y-auto absolute w-full left-0 top-full shadow-2xl border-t border-gray-100">
           <div className="px-4 py-6 space-y-2 text-primary">
             <Link href="/" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-semibold border-b border-gray-50">Inicio</Link>
             <Link href="/nosotros" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-semibold border-b border-gray-50">Nosotros</Link>
