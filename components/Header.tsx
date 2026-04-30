@@ -52,11 +52,11 @@ export default function Header() {
             <Image
               src="/logoascmet.png"
               alt="ASCMET Logo"
-              width={64}
-              height={64}
-              className={`h-14 w-14 sm:h-16 sm:w-16 object-contain transition-all duration-300 ${logoFilter}`}
+              width={88}
+              height={88}
+              className={`h-[72px] w-[72px] sm:h-[88px] sm:w-[88px] object-contain transition-all duration-300 ${logoFilter}`}
             />
-            <span className={`text-3xl sm:text-4xl font-extrabold tracking-tight transition-colors leading-none ${logoColor}`}>
+            <span className={`text-4xl sm:text-5xl font-extrabold tracking-tight transition-colors leading-none ${logoColor}`}>
               SCMET
             </span>
           </Link>
