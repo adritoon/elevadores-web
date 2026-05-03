@@ -65,7 +65,7 @@ export default function Hero() {
             className="flex justify-center items-center gap-2 mb-8 text-white font-semibold bg-white/10 backdrop-blur-md px-4 py-2 rounded-full inline-flex border border-white/20"
           >
             <ShieldCheck size={20} className="text-gray-300" />
-            <span className="tracking-wide">Seguridad y eficiencia en cada nivel</span>
+            <span className="tracking-wide">Tecnología en Ascenso Vertical</span>
           </motion.div>
 
           <h1 className="text-4xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-10 text-white flex flex-col items-center">
