@@ -25,7 +25,7 @@ export default function Hero() {
 
   return (
     /* NUEVO COLOR BASE: primary (Azul Corporativo Profundo) */
-    <section className="relative h-[80vh] md:h-[90vh] min-h-[600px] w-full overflow-hidden bg-primary">
+    <section className="relative min-h-[100svh] md:min-h-[90vh] w-full overflow-hidden bg-primary flex flex-col justify-center">
 
       {/* --- Capa 1: FONDO DINÁMICO --- */}
       <AnimatePresence mode="wait">
@@ -55,8 +55,8 @@ export default function Hero() {
       </div>
 
       {/* --- Capa 3: CONTENIDO PRINCIPAL --- */}
-      <div className="relative z-20 h-full flex items-center justify-center pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-20 w-full flex-1 flex flex-col items-center justify-center pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-12 md:mt-0">
 
           {/* Badge superior en tonos grises */}
           <motion.div

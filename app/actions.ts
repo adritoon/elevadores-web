@@ -5,11 +5,24 @@ import { Resend } from "resend";
 // Asegúrate de que esta variable esté en tu archivo .env.local
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Función simple para escapar HTML y prevenir inyección
+function escapeHTML(str: string) {
+  return str.replace(/[&<>'"]/g, 
+    tag => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[tag] || tag)
+  );
+}
+
 export async function sendEmail(formData: FormData) {
-  const nombre = formData.get("nombre") as string;
-  const email = formData.get("email") as string;
-  const mensaje = formData.get("mensaje") as string;
-  const telefono = formData.get("telefono") as string;
+  const nombre = escapeHTML(formData.get("nombre") as string);
+  const email = escapeHTML(formData.get("email") as string);
+  const mensaje = escapeHTML(formData.get("mensaje") as string);
+  const telefono = escapeHTML(formData.get("telefono") as string);
 
   try {
     const { data, error } = await resend.emails.send({
@@ -38,7 +51,7 @@ export async function sendEmail(formData: FormData) {
           </div>
           <hr style="border: 0; border-top: 3px solid #00A3E0; margin: 25px 0;" />
           <p style="color: #041E42; font-weight: bold; margin-bottom: 10px; font-size: 16px;">Mensaje del cliente:</p>
-          <div style="background-color: #F8FAFC; padding: 20px; border-radius: 8px; border-left: 4px solid #4A525D; margin-top: 0; font-style: italic;">
+          <div style="background-color: #F8FAFC; padding: 20px; border-radius: 8px; border-left: 4px solid #4A525D; margin-top: 0; font-style: italic; white-space: pre-wrap;">
             ${mensaje}
           </div>
         </div>

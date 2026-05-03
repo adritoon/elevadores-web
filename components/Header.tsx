@@ -66,7 +66,7 @@ export default function Header() {
           </Link>
 
           {/* Navegación Desktop */}
-          <nav className="hidden md:flex space-x-8 items-center" style={{ fontSize: 'clamp(1rem, 1.2vw + 0.2rem, 1.7rem)' }}>
+          <nav className="max-md:hidden flex space-x-8 items-center" style={{ fontSize: 'clamp(1rem, 1.2vw + 0.2rem, 1.7rem)' }}>
             <Link href="/" className={`${textColor} transition-colors font-medium`}>Inicio</Link>
             <Link href="/nosotros" className={`${textColor} transition-colors font-medium`}>Nosotros</Link>
 
