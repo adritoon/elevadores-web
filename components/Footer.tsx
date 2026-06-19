@@ -69,11 +69,11 @@ export default function Footer() {
           <ul className="space-y-4 mb-8">
             <li className="flex items-center gap-3 text-primary-foreground/80">
               <Phone className="text-accent shrink-0" size={18} />
-              <span className="font-medium">+51 987 654 321</span>
+              <span className="font-medium">+51 923 385 118</span>
             </li>
             <li className="flex items-center gap-3 text-primary-foreground/80">
               <Mail className="text-accent shrink-0" size={18} />
-              <span className="font-medium">contacto@ascmet.com</span>
+              <span className="font-medium">ventas@ascmet.com</span>
             </li>
           </ul>
 

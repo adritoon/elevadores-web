@@ -47,7 +47,7 @@ function FormularioContacto() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-primary opacity-60 uppercase">Llámanos</p>
-                    <p className="text-lg font-semibold text-primary">+51 987 654 321</p>
+                    <p className="text-lg font-semibold text-primary">+51 923 385 118</p>
                   </div>
                 </div>
 
@@ -60,7 +60,7 @@ function FormularioContacto() {
                     <p className="text-sm font-bold text-primary opacity-60 uppercase">Escríbenos</p>
                     {/* 2. break-all permite cortar el texto, y bajamos un poco la fuente en móvil (text-base) */}
                     <p className="text-base sm:text-lg font-semibold text-primary break-all">
-                      contacto@ascmet.com
+                      ventas@ascmet.com
                     </p>
                   </div>
                 </div>

@@ -3,7 +3,7 @@ import { servicios, productos } from '../lib/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Configura aquí tu dominio real o usa la variable de entorno de Vercel
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.ascmet.pe'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.ascmet.com'
 
   const serviciosUrls = servicios.map((servicio) => ({
     url: `${baseUrl}/servicios/${servicio.slug}`,

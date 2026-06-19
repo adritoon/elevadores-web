@@ -29,10 +29,10 @@ export async function sendEmail(formData: FormData) {
       /* IMPORTANTE: Si no has validado un dominio en Resend, 
          DEBES usar "onboarding@resend.dev" aquí.
       */
-      from: "ASCMET Web <onboarding@resend.dev>", 
+      from: "ASCMET Ventas <ventas@ascmet.com>", 
       
       /* AQUÍ TU CORREO DONDE RECIBIRÁS LOS CLIENTES */
-      to: ["adrian13759@gmail.com"], 
+      to: ["ventas@ascmet.com", "adrian13759@gmail.com"], 
       
       subject: `🚀 Nueva Cotización: ${nombre}`,
       

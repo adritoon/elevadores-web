@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ASCMET | Expertos en Elevación",
     description: "Venta, mantenimiento y modernización de equipos.",
-    url: "https://www.ascmet.pe",
+    url: "https://www.ascmet.com",
     siteName: "ASCMET",
     images: [
       {

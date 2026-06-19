@@ -3,7 +3,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function BotonWhatsApp() {
-  const numero = "51987654321"; // Tu número con código de país (51 para Perú)
+  const numero = "51923385118"; // Tu número con código de país (51 para Perú)
   const mensaje = "Hola ASCMET, me gustaría solicitar información sobre sus elevadores.";
   
   const whatsappUrl = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
