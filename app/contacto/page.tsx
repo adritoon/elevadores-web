@@ -3,13 +3,14 @@
 import { useState, Suspense } from "react"; // 1. Agregamos Suspense aquí
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { sendEmail } from "../actions";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 
 // --- ESTA ES LA FUNCIÓN QUE TIENE EL FORMULARIO ---
 function FormularioContacto() {
   const [isPending, setIsPending] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const searchParams = useSearchParams();
+  const router = useRouter();
   const asuntoPredefinido = searchParams.get("asunto");
 
   const mensajeInicial = asuntoPredefinido 
@@ -20,7 +21,12 @@ function FormularioContacto() {
     setIsPending(true);
     const result = await sendEmail(formData);
     setIsPending(false);
-    if (result.success) setIsSent(true);
+    if (result.success) {
+      router.push("/gracias");
+    } else {
+      setIsSent(false);
+      alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo o contáctanos directamente.");
+    }
   }
 
   return (
